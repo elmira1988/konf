@@ -10942,3 +10942,11 @@ a.text-dark:focus {
   }
 }
 
+body {
+  background-color: #d2e9fb !important;
+}
+
+.btn-link {
+  color: #005ca9;
+}
+
