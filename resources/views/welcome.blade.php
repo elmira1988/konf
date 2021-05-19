@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     </head>
     <body>
+    @include('orgkomitet')
         <div class="flex-center position-ref full-height" id="app">
             <div class="container content">
                 <div class="m-b-md mt-5">
@@ -22,7 +23,7 @@
                     <h5 class="text-center">12 – 15 сентября 2021 года</h5>
 
                     <div class="d-flex justify-content-around">
-                            <button type="button" class="btn btn-link">ОРГКОМИТЕТ</button>
+                            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#orgkomitet">ОРГКОМИТЕТ</button>
                             <button type="button" class="btn btn-link">ПРОГРАММНЫЙ КОМИТЕТ</button>
                             <button type="button" class="btn btn-link">ФОРМЫ УЧАСТИЯ</button>
                             <button type="button" class="btn btn-link">ПРАВИЛА ОФОРМЛЕНИЯ ТЕЗИСОВ</button>
@@ -71,6 +72,7 @@
         </div>
 
         <script src="{{ mix('/js/app.js') }}"></script>
+
 
     </body>
 </html>

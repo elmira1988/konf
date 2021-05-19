@@ -10950,3 +10950,29 @@ body {
   color: #005ca9;
 }
 
+.modal-header .btn-close {
+  padding: 8px;
+  margin: -0.5rem -0.5rem -0.5rem auto;
+}
+
+.modal .btn-close {
+  background-image: url(/images/close.svg?b4fe8c22d879da426d59c3b31d296025);
+}
+
+.btn-close {
+  box-sizing: content-box;
+  width: 24px !important;
+  height: 24px !important;
+  padding: 0.25em 0.25em;
+  color: #fff;
+  background: transparent url(/images/close.svg?b4fe8c22d879da426d59c3b31d296025) center/1em auto no-repeat;
+  border: 0;
+  border-radius: 0.25rem;
+  opacity: 0.4;
+}
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
