@@ -13986,7 +13986,7 @@ a.text-dark:focus {
 }
 
 body {
-  background-color: #d2e9fb !important;
+  background-color: #d4dfe8 !important;
 }
 
 .btn-link {
@@ -14053,5 +14053,12 @@ body {
   text-align: center;
   color: #fff;
   background: #00897b;
+}
+
+.leader .fa {
+  font-size: 5pt;
+  margin-bottom: 3px;
+  top: -1px;
+  position: relative;
 }
 
