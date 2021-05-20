@@ -152,11 +152,22 @@
                     </div>
                 </div>
 
-               ;
+                <div class="row mt-4">
+                    <div class="col-lg-6">
+                        <b> <span class="fa fa-map-marker mr-1"></span>адрес оргкомитета</b><br>
+                        453103, г. Стерлитамак,  ул. Одесская, 68, ИCИ РБ<br>
+                        <b><span class="fa fa-envelope mr-1"></span>E-mail</b><br>
+                        konfer2021@mail.ru
+                    </div>
 
+                    <div class="col-lg-6">
+                        <b><span class="fa fa-phone mr-1"></span> cправки по телефонам</b><br>
+                        8 (3473) 30-27-70;<br>
+                        8 (987) 143-98-18 – Михайлов Павел Никонович<br>
+                        8 (917) 412-09-45 – Сидоров Станислав Николаевич
+                    </div>
 
-
-
+                </div>
             </div>
         </div>
     </div>

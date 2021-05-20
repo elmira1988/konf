@@ -31,3 +31,40 @@ body{
     margin-bottom: 0;
     line-height: 1.5;
 }
+
+.list-counter-square  div{
+    background: #376f9e;
+    color: white;
+}
+
+.list-counter-square>li {
+    position: relative;
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    margin-left: 2.25rem;
+    margin-bottom: .25rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    color: #fff;
+    background: #00897b;
+}
+
+.list-counter-square>li:last-child {
+    margin-bottom: 0;
+}
+
+.list-counter-square>li::before {
+    content: counter(list);
+    counter-increment: list;
+    position: absolute;
+    left: -2.25rem;
+    top: 0;
+    bottom: 0;
+    width: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    background: #00897b;
+}
+
