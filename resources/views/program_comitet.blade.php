@@ -13,7 +13,7 @@
                 <div class="row mt-3">
                     <div class="col-lg-3"> <h6 class="font-weight-bold">Нигматулин Р.И.</h6></div>
                     <div class="col-lg-3"> <h6>сопредседатель</h6> </div>
-                    <div class="col-lg-6"> <h6>научный руководитель <br>Института океанологии им. П.П.</h6></div>
+                    <div class="col-lg-6"> <h6>научный руководитель Института океанологии <br>им. П.П. Ширшова РАН, академик РАН, г. Москва</h6></div>
                 </div>
                 <hr class="m-1">
 

@@ -125,7 +125,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mc.noriss.ru" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
@@ -163,7 +163,7 @@
       <workItem from="1621436913086" duration="5541000" />
       <workItem from="1621444493156" duration="3954000" />
       <workItem from="1621481190025" duration="5294000" />
-      <workItem from="1621486657298" duration="13419000" />
+      <workItem from="1621486657298" duration="15980000" />
     </task>
     <servers />
   </component>
