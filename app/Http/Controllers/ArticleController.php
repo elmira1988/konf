@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Article;
+use App\Http\Requests\ArticleRequest;
 
 class ArticleController extends Controller
 {
@@ -32,9 +34,17 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
-        //
+        //return response()->json($request->all());
+
+       /* $article = new Article();
+
+        $article->name_ru = $request->name_ru;
+
+        $article->save();*/
+
+        return response()->json($request->all());
     }
 
     /**

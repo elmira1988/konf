@@ -14139,3 +14139,7 @@ body {
   content: " ";
 }
 
+.error {
+  border: 1px solid red;
+}
+

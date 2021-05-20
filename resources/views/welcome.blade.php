@@ -17,7 +17,7 @@
     @include('pravila')
 
         <div class="flex-center position-ref full-height" id="app">
-            <div class="container content mb-5">
+            <div class="container content mb-5" @submit="send_form">
                 <div class="m-b-md mt-5">
                     <h6 class="text-center leader">
                             <span class="ml-1 fa fa-circle mr-1"></span> Министерство науки и высшего образования Российской Федерации
@@ -125,58 +125,58 @@
 
                 <h4 class="mt-4 text-center font-weight-bold">Отправить заявку на участие</h4>
 
-                <form class="form-horizontal form-label-left mt-3">
+                <form class="form-horizontal form-label-left mt-3" action="{{ route('articles.store') }}">
                     <h5 class="text-center">Авторы</h5>
 
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" placeholder="Фамилия (на рус. языке)">
+                                <input type="text" class="form-control has-feedback-left" name="surname_ru" placeholder="Фамилия (на рус. языке)">
                                 <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                             </div>
 
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" placeholder="Имя (на рус. языке)">
+                                <input type="text" class="form-control has-feedback-left" name="name_ru" placeholder="Имя (на рус. языке)">
                                 <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                             </div>
 
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" placeholder="Отчество (на рус. языке)">
+                                <input type="text" class="form-control has-feedback-left" name="patronymic_ru" placeholder="Отчество (на рус. языке)">
                                 <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                             </div>
 
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" placeholder="Место работы (на рус. языке)">
+                                <input type="text" class="form-control has-feedback-left" name="work_ru" placeholder="Место работы (на рус. языке)">
                                 <span class="fa fa-building form-control-feedback left" aria-hidden="true"></span>
                             </div>
 
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" placeholder="Адрес (на рус. языке)">
+                                <input type="text" class="form-control has-feedback-left" name="adress_ru" placeholder="Адрес (на рус. языке)">
                                 <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
                             </div>
 
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" placeholder="Должность (на рус. языке)">
+                                <input type="text" class="form-control has-feedback-left" name="status_ru" placeholder="Должность (на рус. языке)">
                                 <span class="fa fa-star form-control-feedback left" aria-hidden="true"></span>
                             </div>
 
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="col-lg-12 pr-0 form-group">
-                                        <select class="form-control" placeholder="ученая степень">
+                                        <select class="form-control" name="stepen" placeholder="ученая степень">
                                             <option value="">ученая степень</option>
-                                            <option>кандидат наук</option>
-                                            <option>доктор наук</option>
+                                            <option value="1">кандидат наук</option>
+                                            <option value="2">доктор наук</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6">
                                     <div class="col-lg-12 pl-0 form-group">
-                                        <select class="form-control" placeholder="ученое звание">
+                                        <select class="form-control" name="zvaniye" placeholder="ученое звание">
                                             <option value="">ученое звание</option>
-                                            <option>доцент</option>
-                                            <option>профессор</option>
+                                            <option value="1">доцент</option>
+                                            <option value="2">профессор</option>
                                         </select>
                                     </div>
 
@@ -188,32 +188,32 @@
 
                         <div class="col-lg-6 ">
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" placeholder="Фамилия (на анг. языке)">
+                                <input type="text" class="form-control has-feedback-left" name="surname_en" placeholder="Фамилия (на анг. языке)">
                                 <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                             </div>
 
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" placeholder="Имя (на анг. языке)">
+                                <input type="text" class="form-control has-feedback-left" name="name_en" placeholder="Имя (на анг. языке)">
                                 <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                             </div>
 
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" placeholder="Отчество (на анг. языке)">
+                                <input type="text" class="form-control has-feedback-left" name="patronymic_en" placeholder="Отчество (на анг. языке)">
                                 <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                             </div>
 
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" placeholder="Место работы (на анг. языке)">
+                                <input type="text" class="form-control has-feedback-left" name="work_en" placeholder="Место работы (на анг. языке)">
                                 <span class="fa fa-building form-control-feedback left" aria-hidden="true"></span>
                             </div>
 
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" placeholder="Адрес (на анг. языке)">
+                                <input type="text" class="form-control has-feedback-left" name="adress_en" placeholder="Адрес (на анг. языке)">
                                 <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
                             </div>
 
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" placeholder="Должность (на анг. языке)">
+                                <input type="text" class="form-control has-feedback-left" name="status_en" placeholder="Должность (на анг. языке)">
                                 <span class="fa fa-star form-control-feedback left" aria-hidden="true"></span>
                             </div>
 
@@ -234,12 +234,12 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group">
-                                <textarea class="form-control" rows="3" placeholder="Название статьи (на рус. языке)"></textarea>
+                                <textarea class="form-control" rows="3" name="article_name_ru" :class="{'error':errors['article_name_ru']}" placeholder="Название статьи (на рус. языке)"></textarea>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group">
-                                <textarea class="form-control" rows="3" placeholder="Название статьи (на англ. языке)"></textarea>
+                                <textarea class="form-control" rows="3" name="article_name_en" :class="{'error':errors['article_name_en']}" placeholder="Название статьи (на англ. языке)"></textarea>
                             </div>
                         </div>
                     </div>
@@ -247,12 +247,12 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group">
-                                <textarea class="form-control" rows="3" placeholder="Аннотация к  статье (на рус. языке)"></textarea>
+                                <textarea class="form-control" rows="3" name="annot_ru" :class="{'error':errors['annot_ru']}" placeholder="Аннотация к  статье (на англ. языке)"></textarea>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group">
-                                <textarea class="form-control" rows="3" placeholder="Аннотация к  статье (на англ. языке)"></textarea>
+                                <textarea class="form-control" rows="3" name="annot_en" :class="{'error':errors['annot_en']}" placeholder="Аннотация к  статье (на англ. языке)"></textarea>
                             </div>
                         </div>
                     </div>
@@ -261,7 +261,7 @@
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group">
                                 <label>Ключевые слова на русском языке</label>
-                                <input type="text" class="form-control" placeholder="слово на рус. языке">
+                                <input type="text" class="form-control" name="word_ru" placeholder="слово на рус. языке">
                                 <button type="button" class="btn btn-outline-secondary mt-2 pt-0 pb-0 pl-2 pr-2 pull-right">
                                     <span class="fa fa-plus mr-2"></span>добавить слово</button>
                             </div>
@@ -269,7 +269,7 @@
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group">
                                 <label>Ключевые слова на английском языке</label>
-                                <input type="text" class="form-control" placeholder="слово на англ. языке">
+                                <input type="text" class="form-control" name="word_en" placeholder="слово на англ. языке">
                                 <button type="button" class="btn btn-outline-secondary mt-2 pt-0 pb-0 pl-2 pr-2 pull-right">
                                     <span class="fa fa-plus mr-2"></span>добавить слово</button>
                             </div>
@@ -281,29 +281,29 @@
                     <div class="row mt-3">
                         <div class="col-lg-3">
                             <div class="col-lg-12 form-group">
-                                <input type="text" class="form-control" placeholder="Рубрикатор УДК">
+                                <input type="text" class="form-control" name="udk" placeholder="Рубрикатор УДК">
                             </div>
                         </div>
 
                         <div class="col-lg-3">
                             <div class="col-lg-12 form-group">
-                                <input type="text" class="form-control" placeholder="Рубрикатор ББК">
+                                <input type="text" class="form-control" name="bbk" placeholder="Рубрикатор ББК">
                             </div>
                         </div>
 
                         <div class="col-lg-12 mt-3">
                             <div class="col-lg-12 form-group d-flex">
-                                <lavel class="mr-2">Язык текста статьи</lavel>
+                                <label class="mr-2">Язык текста статьи</label>
                                 <div class="ml-5">
                                     <div class="form-check ">
-                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                        <input class="form-check-input" type="radio" name="ru" id="exampleRadios1" value="option1" checked>
                                         <label class="form-check-label" for="exampleRadios1">русский</label>
                                     </div>
                                 </div>
 
                                 <div class="ml-5">
                                     <div class="form-check ">
-                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                        <input class="form-check-input" type="radio" name="en" id="exampleRadios1" value="option1">
                                         <label class="form-check-label" for="exampleRadios1">английский</label>
                                     </div>
                                 </div>
@@ -317,28 +317,28 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group has-feedback">
-                                <select class="form-control" placeholder="секция">
+                                <select class="form-control" placeholder="секция" name="section">
                                     <option value="">Секция</option>
-                                    <option>1. Спектральная теория дифференциальных операторов</option>
-                                    <option>2. Теория функций и функционального анализа</option>
-                                    <option>3. Краевые задачи для дифференциальных уравнений</option>
-                                    <option>4. Обратные и некорректные задачи</option>
-                                    <option>5. Уравнения смешанного типа</option>
-                                    <option>6. Математические проблемы механики</option>
-                                    <option>7. Прикладные задачи термодинамики и теплофизики</option>
-                                    <option>8. Математическое моделирование сложных процессов и систем</option>
-                                    <option>9. Актуальные проблемы математического и физического образования в Вузе</option>
+                                    <option value="1">1. Спектральная теория дифференциальных операторов</option>
+                                    <option value="2">2. Теория функций и функционального анализа</option>
+                                    <option value="3">3. Краевые задачи для дифференциальных уравнений</option>
+                                    <option value="4">4. Обратные и некорректные задачи</option>
+                                    <option value="5">5. Уравнения смешанного типа</option>
+                                    <option value="6">6. Математические проблемы механики</option>
+                                    <option value="7">7. Прикладные задачи термодинамики и теплофизики</option>
+                                    <option value="8">8. Математическое моделирование сложных процессов и систем</option>
+                                    <option value="9">9. Актуальные проблемы математического и физического образования в Вузе</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group has-feedback">
-                                <select class="form-control" placeholder="форма участия">
+                                <select class="form-control" placeholder="форма участия" name="form">
                                     <option value="">Форма участия</option>
-                                    <option>Выступление с пленарным докладом</option>
-                                    <option>Выступление с секционным докладом</option>
-                                    <option>Представление стендового доклада</option>
+                                    <option value="1">Выступление с пленарным докладом</option>
+                                    <option value="2">Выступление с секционным докладом</option>
+                                    <option value="3">Представление стендового доклада</option>
                                 </select>
                             </div>
                         </div>
@@ -350,14 +350,14 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" placeholder="Телефон">
+                                <input type="text" class="form-control has-feedback-left" name="phone" placeholder="Телефон">
                                 <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
                             </div>
                         </div>
 
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" placeholder="E-mail">
+                                <input type="text" class="form-control has-feedback-left" name="email" placeholder="E-mail">
                                 <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                             </div>
                         </div>
@@ -365,8 +365,12 @@
 
 
                     <div class="form-group">
-                        <div class="col-lg-12 text-right">
-                            <button type="submit" class="btn btn-success"><span class="fa fa-paper-plane"></span> Отправить заявку</button>
+                        <div class="col-lg-12">
+                            <button class="d-none" type="submit" id="send_form"></button>
+
+                            <label class="group-5 btn btn-success pull-right" type="button"  for="send_form">
+                                <span class="fa fa-paper-plane"></span> Отправить заявку
+                            </label>
                         </div>
                     </div>
 

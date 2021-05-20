@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/problems-of-mathematics-and-physics-2021', function () {
     return view('welcome');
 });
+
+Route::resource("articles","ArticleController");
