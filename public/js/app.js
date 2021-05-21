@@ -53826,6 +53826,10 @@ webpackContext.id = "./resources/js sync recursive \\.vue$/";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var _Vue;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -53856,7 +53860,7 @@ files.keys().map(function (key) {
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-var app = new Vue({
+var app = new Vue((_Vue = {
   el: '#app',
   mounted: function mounted() {
     console.log('123');
@@ -53865,56 +53869,57 @@ var app = new Vue({
     return {
       errors: {}
     };
-  },
-  methods: {
-    send_form: function send_form(e) {
-      var _this = this;
+  }
+}, _defineProperty(_Vue, "mounted", function mounted() {}), _defineProperty(_Vue, "methods", {
+  send_form: function send_form(e) {
+    var _this = this;
 
-      console.log('send form!');
-      e.preventDefault();
-      var form = $(e.target);
-      var url = form.attr('action');
-      var formData = new FormData(form[0]); //$('body').append('<div class="modal-backdrop show"></div>');
-      //$('.modal-preloader').addClass('d-block');
+    console.log('send form!');
+    e.preventDefault();
+    var form = $(e.target);
+    var url = form.attr('action');
+    var formData = new FormData(form[0]);
+    $('body').append('<div class="modal-backdrop show"></div>');
+    $('.modal-preloader').addClass('d-block');
+    axios.post(url, formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    }).then(function (response) {
+      console.log('SUCCESS!!');
+      console.log(response); //Не прошла проверка форма с данными
 
-      axios.post(url, formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
+      if (response.data.errors) {
+        console.log(response.data.errors);
+        _this.errors = response.data.errors;
+        $('body').find(".modal-backdrop.show").remove();
+        $('.modal-preloader').removeClass('d-block');
+
+        if (!$.isEmptyObject(_this.errors)) {
+          console.log('он не пустой');
+          PNotify.alert({
+            title: 'Ошибка в данных',
+            text: "Пожалуйста, проверьте вводимые данные!",
+            type: 'error',
+            hide: true,
+            animation: 'fade',
+            animateSpeed: '250ms',
+            delay: 4000,
+            remove: true,
+            width: 700,
+            styling: 'bootstrap4',
+            buttons: {
+              closer: false,
+              sticker: false
+            }
+          });
         }
-      }).then(function (response) {
-        console.log('SUCCESS!!');
-        console.log(response); //Не прошла проверка форма с данными
+      } else {
+        $('body').find(".modal-backdrop.show").remove();
+        $('.modal-preloader').removeClass('d-block');
 
-        if (response.data.errors) {
-          console.log(response.data.errors);
-          _this.errors = response.data.errors; //$('body').find(".modal-backdrop.show").remove();
-          //$('.modal-preloader').removeClass('d-block');
-
-          if (!$.isEmptyObject(_this.errors)) {
-            console.log('он не пустой');
-            PNotify.alert({
-              title: 'Ошибка в данных',
-              text: "Пожалуйста, проверьте вводимые данные!",
-              type: 'error',
-              hide: true,
-              animation: 'fade',
-              animateSpeed: '250ms',
-              delay: 4000,
-              remove: true,
-              width: 700,
-              styling: 'bootstrap4',
-              buttons: {
-                closer: false,
-                sticker: false
-              }
-            });
-          }
-        } else {
-          //$('body').find(".modal-backdrop.show").remove();
-          //$('.modal-preloader').removeClass('d-block');
-          if (response.data.status == 'error') {
-            /*
-            PNotify.alert({
+        if (response.data.status == 'error') {
+          PNotify.alert({
             title: 'Ошибка!',
             text: "Ошибка при работе с базой данных!",
             type: 'danger',
@@ -53923,31 +53928,37 @@ var app = new Vue({
             animateSpeed: '250ms',
             delay: 4000,
             remove: true,
-            width:700,
+            width: 700,
             styling: 'bootstrap4',
-            buttons: {closer: false,sticker: false}
-            });*/
-          } else {//window.location = response.data.url;
+            buttons: {
+              closer: false,
+              sticker: false
             }
-        }
-      })["catch"](function (error) {
-        console.log('FAILURE!!');
-      });
-    },
-    removeErrors: function removeErrors(el) {
-      var obj = {};
-      var name = $(el).attr('name');
-
-      for (var key in this.errors) {
-        if (key != name) {
-          obj[key] = this.errors[key];
+          });
+        } else {
+          document.getElementById('sendokbtn').click();
         }
       }
+    })["catch"](function (error) {
+      console.log('FAILURE!!');
+    });
+  },
+  removeErrors: function removeErrors(el) {
+    var obj = {};
+    var name = $(el).attr('name');
 
-      this.errors = obj;
+    for (var key in this.errors) {
+      if (key != name) {
+        obj[key] = this.errors[key];
+      }
     }
+
+    this.errors = obj;
+  },
+  reload_page: function reload_page() {
+    window.location.reload();
   }
-});
+}), _Vue));
 
 /***/ }),
 
@@ -54224,8 +54235,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! F:\WebServer\OSPanel\domains\konf\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! F:\WebServer\OSPanel\domains\konf\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! E:\Arimle\Webserver\OSPanel\domains\konf\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\Arimle\Webserver\OSPanel\domains\konf\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -104,10 +104,10 @@ class ArticleController extends Controller
 
         }
 
-        //Mail::to($request->email);
-        Mail::send('send_email', array(), function($message)
+        $data = array('email' => $request->email);
+        Mail::send('send_email', array(), function($message) use($data)
         {
-            $message->to('elmira.sharapova@yandex.ru')->subject('Международная конференция. Заявка успено отправлена да');
+            $message->to($data['email'])->subject('Международная конференция. Заявка успешно принята!');
         });
 
         return response()->json($request->all());

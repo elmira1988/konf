@@ -11,7 +11,39 @@
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     </head>
     <body>
-    @include('orgkomitet')
+    <div class="modal modal-preloader" tabindex="-1" aria-modal="true">
+        <div class="modal-dialog" style="margin-top:20%">
+            <div class="alert alert-info mt-1" role="alert">
+                <span class="alert-icon fa fa-hand-o-up"></span>
+                <span>Пожалуйста, подождите, идет загрузка данных ... </span>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Модальное окно -->
+    <div class="modal" tabindex="-1" role="dialog" id="sendok">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body pb-0 text-center">
+                    <div class="alert alert-success mt-1" role="alert">
+                        <span class="alert-icon fa fa-thumbs-up"></span>
+                        Ваша заявка успешно отправлена! <br>Ожидайте письмо с одтверждением на указанную почту!
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="{{ asset('/math-21') }}" type="button" class="btn btn-success m-auto">хорошо</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<button type="button" class="btn btn-link d-none" data-toggle="modal" data-target="#sendok" id="sendokbtn" >отправлено</button>
+
+
+
+@include('orgkomitet')
     @include('program_comitet')
     @include('form_uchastiya')
     @include('pravila')
@@ -263,8 +295,8 @@
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group">
                                 <div class="form-group">
-                                    <label for="tex">Тезис в формате .pdf</label>
-                                    <input type="file" class="form-control-file" id="tex" name="pdf" :class="{'error':errors['pdf']}">
+                                    <label for="pdf">Тезис в формате .pdf</label>
+                                    <input type="file" class="form-control-file" id="pdf" name="pdf" :class="{'error':errors['pdf']}">
                                 </div>
                             </div>
                         </div>

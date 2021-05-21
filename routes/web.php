@@ -15,7 +15,7 @@ Route::get('/', function () {
     echo 'Hellow, World!';
 });
 
-Route::get('/math-2021', function () {
+Route::get('/math-21', function () {
     return view('welcome');
 });
 

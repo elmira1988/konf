@@ -40,6 +40,8 @@ const app = new Vue({
             errors: {}
         }
     },
+    mounted:function (){
+    },
     methods:{
         send_form:function (e) {
             console.log('send form!');
@@ -48,8 +50,8 @@ const app = new Vue({
             let url = form.attr('action');
             let formData = new FormData(form[0]);
 
-            //$('body').append('<div class="modal-backdrop show"></div>');
-            //$('.modal-preloader').addClass('d-block');
+            $('body').append('<div class="modal-backdrop show"></div>');
+            $('.modal-preloader').addClass('d-block');
 
             axios.post( url,
                 formData,
@@ -67,8 +69,8 @@ const app = new Vue({
                     console.log(response.data.errors);
                     this.errors = response.data.errors;
 
-                    //$('body').find(".modal-backdrop.show").remove();
-                    //$('.modal-preloader').removeClass('d-block');
+                    $('body').find(".modal-backdrop.show").remove();
+                    $('.modal-preloader').removeClass('d-block');
 
                     if (!$.isEmptyObject(this.errors)) {
                         console.log('он не пустой');
@@ -89,10 +91,10 @@ const app = new Vue({
 
                 }
                 else {
-                    //$('body').find(".modal-backdrop.show").remove();
-                    //$('.modal-preloader').removeClass('d-block');
+                    $('body').find(".modal-backdrop.show").remove();
+                    $('.modal-preloader').removeClass('d-block');
 
-                    if(response.data.status=='error'){/*
+                    if(response.data.status=='error'){
                         PNotify.alert({
                             title: 'Ошибка!',
                             text: "Ошибка при работе с базой данных!",
@@ -105,10 +107,10 @@ const app = new Vue({
                             width:700,
                             styling: 'bootstrap4',
                             buttons: {closer: false,sticker: false}
-                        });*/
+                        });
                     }
                     else {
-                        //window.location = response.data.url;
+                        document.getElementById('sendokbtn').click();
                     }
 
                 }
@@ -126,6 +128,9 @@ const app = new Vue({
                 }
             }
             this.errors=obj;
+        },
+        reload_page: function () {
+            window.location.reload()
         }
     }
 });
