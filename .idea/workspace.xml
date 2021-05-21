@@ -20,6 +20,13 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -125,7 +132,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mc.noriss.ru" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
@@ -163,7 +170,10 @@
       <workItem from="1621436913086" duration="5541000" />
       <workItem from="1621444493156" duration="3954000" />
       <workItem from="1621481190025" duration="5294000" />
-      <workItem from="1621486657298" duration="19998000" />
+      <workItem from="1621486657298" duration="20403000" />
+      <workItem from="1621566901550" duration="103000" />
+      <workItem from="1621567099078" duration="10926000" />
+      <workItem from="1621578355960" duration="18610000" />
     </task>
     <servers />
   </component>

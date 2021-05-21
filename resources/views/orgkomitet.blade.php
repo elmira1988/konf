@@ -103,7 +103,7 @@
                         <h6><b>Мирсабуров М. </b><br><small>г. Термез</small></h6>
                         <h6><b>Мукминов Ф.Х. </b><br><small>г. Уфа</small></h6>
                         <h6><b>Насыров С.Р. </b><br><small>г. Казань</small></h6>
-
+                        <h6><b>Маликов Р.Ф. </b><br><small>г. Уфа</small></h6>
 
                     </div>
                     <div class="col-lg-3">

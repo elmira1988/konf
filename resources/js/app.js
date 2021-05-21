@@ -33,6 +33,7 @@ const app = new Vue({
     el: '#app',
     mounted: function() {
         console.log('123');
+
     },
     data: function(){
         return{
@@ -70,11 +71,11 @@ const app = new Vue({
                     //$('.modal-preloader').removeClass('d-block');
 
                     if (!$.isEmptyObject(this.errors)) {
-                        console.log('он не пустой');/*
+                        console.log('он не пустой');
                         PNotify.alert({
                             title: 'Ошибка в данных',
                             text: "Пожалуйста, проверьте вводимые данные!",
-                            type: 'danger',
+                            type: 'error',
                             hide: true,
                             animation: 'fade',
                             animateSpeed: '250ms',
@@ -83,7 +84,7 @@ const app = new Vue({
                             width:700,
                             styling: 'bootstrap4',
                             buttons: {closer: false,sticker: false}
-                        });*/
+                        });
                     }
 
                 }
@@ -107,7 +108,7 @@ const app = new Vue({
                         });*/
                     }
                     else {
-                        window.location = response.data.url;
+                        //window.location = response.data.url;
                     }
 
                 }

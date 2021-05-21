@@ -15,7 +15,7 @@ Route::get('/', function () {
     echo 'Hellow, World!';
 });
 
-Route::get('/problems-of-mathematics-and-physics-2021', function () {
+Route::get('/math-2021', function () {
     return view('welcome');
 });
 

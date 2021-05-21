@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArticleTable extends Migration
+class CreateArticlesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -22,10 +22,15 @@ class CreateArticleTable extends Migration
             $table->text('word_ru');//Ключевые слова на рус. языке
             $table->text('word_en');//Ключевые слова на англ. языке
             $table->string('udk')->default('');//УДК
-            $table->string('bbk')->default('');//ББК
-            $table->integer('language');//Язык
-            $table->integer('section');//Секция
-            $table->integer('form');//Форма
+            $table->string('language');//Язык
+            $table->string('tex');//Файл .tex
+            $table->string('pdf');//Файл .pdf
+
+            $table->bigInteger('section_id')->unsigned();
+            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade')->onUpdate('cascade');//Секция
+            $table->bigInteger('form_id')->unsigned();
+            $table->foreign('form_id')->references('id')->on('forms')->onDelete('cascade')->onUpdate('cascade');//Форма
+
             $table->string('phone')->default('');//ББК
             $table->string('email')->default('');//ББК
             $table->softDeletes();

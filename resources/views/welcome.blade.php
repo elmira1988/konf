@@ -20,7 +20,7 @@
             <div class="container content mb-5" @submit="send_form">
                 <div class="m-b-md mt-5">
                     <h6 class="text-center leader">
-                            <span class="ml-1 fa fa-circle mr-1"></span> Министерство науки и высшего образования Российской Федерации
+                            <span class="ml-1 fa fa-circle mr-1"></span>Министерство науки и высшего образования Российской Федерации
                             <span class="ml-1 fa fa-circle mr-1"></span>Академия наук Республики Башкортостан<br>
                             <span class="ml-1 fa fa-circle mr-1"></span>Башкирский государственный университет
                             <span class="ml-1 fa fa-circle mr-1"></span>Самарский государственный технический университет
@@ -35,7 +35,9 @@
                     <h4 class="text-center mb-1">
                         посвященная 70-летию чл.-корр. АН РБ К.Б. Сабитова
                     </h4>
-                    <h6 class="text-center">12 – 15 сентября 2021 года</h6>
+                    <h6 class="text-center">12 – 15 сентября 2021 года<br>
+                        <a href="{{ asset('files/Informacionnoye_pismo.pdf') }}">информационное письмо</a>
+                    </h6>
 
                      <div class="row ">
                          <div class="col-lg-3 col-md-6 text-center pl-0">
@@ -125,121 +127,45 @@
 
                 <h4 class="mt-4 text-center font-weight-bold">Отправить заявку на участие</h4>
 
-                <form class="form-horizontal form-label-left mt-3" action="{{ route('articles.store') }}">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="alert alert-warning" role="alert">
+                            <span class="fa fa-exclamation-triangle"></span> Внимание! Все поля, указанные ниже, обязательны к заполнению (кроме поля "Отчество")!<br>
+                            В поле "Место работы" указывается только наименование организации, данные о ее местонахождении заполняются в строке "Адрес"<br>
+                            Поля "Учёная степень", "Учёное звание", "Должность" автора (авторов)  указываются без сокращений (на рус. и англ. яз.)
+                            </p>
+                    </div>
+
+                </div>
+
+
+                <form class="form-horizontal form-label-left mt-3" action="{{ route('articles.store') }}" enctype = 'multipart/form-data'>
                     <h5 class="text-center">Авторы</h5>
-
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" name="surname_ru" placeholder="Фамилия (на рус. языке)">
-                                <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
-                            </div>
-
-                            <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" name="name_ru" placeholder="Имя (на рус. языке)">
-                                <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
-                            </div>
-
-                            <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" name="patronymic_ru" placeholder="Отчество (на рус. языке)">
-                                <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
-                            </div>
-
-                            <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" name="work_ru" placeholder="Место работы (на рус. языке)">
-                                <span class="fa fa-building form-control-feedback left" aria-hidden="true"></span>
-                            </div>
-
-                            <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" name="adress_ru" placeholder="Адрес (на рус. языке)">
-                                <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
-                            </div>
-
-                            <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" name="status_ru" placeholder="Должность (на рус. языке)">
-                                <span class="fa fa-star form-control-feedback left" aria-hidden="true"></span>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="col-lg-12 pr-0 form-group">
-                                        <select class="form-control" name="stepen" placeholder="ученая степень">
-                                            <option value="">ученая степень</option>
-                                            <option value="1">кандидат наук</option>
-                                            <option value="2">доктор наук</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <div class="col-lg-12 pl-0 form-group">
-                                        <select class="form-control" name="zvaniye" placeholder="ученое звание">
-                                            <option value="">ученое звание</option>
-                                            <option value="1">доцент</option>
-                                            <option value="2">профессор</option>
-                                        </select>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <div class="col-lg-6 ">
-                            <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" name="surname_en" placeholder="Фамилия (на анг. языке)">
-                                <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
-                            </div>
-
-                            <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" name="name_en" placeholder="Имя (на анг. языке)">
-                                <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
-                            </div>
-
-                            <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" name="patronymic_en" placeholder="Отчество (на анг. языке)">
-                                <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
-                            </div>
-
-                            <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" name="work_en" placeholder="Место работы (на анг. языке)">
-                                <span class="fa fa-building form-control-feedback left" aria-hidden="true"></span>
-                            </div>
-
-                            <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" name="adress_en" placeholder="Адрес (на анг. языке)">
-                                <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
-                            </div>
-
-                            <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" name="status_en" placeholder="Должность (на анг. языке)">
-                                <span class="fa fa-star form-control-feedback left" aria-hidden="true"></span>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="col-lg-12 text-right">
-                                <button type="button" class="btn btn-outline-secondary pt-0 pb-0 pl-2 pr-2"><span class="fa fa-plus mr-2"></span>добавить автора</button>
-                            </div>
-                        </div>
-                    </div>
-
+                    <authors-component :degree="{{ json_encode(\App\Degree::get()) }}"
+                                       :ranks="{{ json_encode(\App\Rank::get()) }}"
+                                       :errors="errors"></authors-component>
 
                     <h5 class="text-center mt-4">Статья</h5>
 
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group">
-                                <textarea class="form-control" rows="3" name="article_name_ru" :class="{'error':errors['article_name_ru']}" placeholder="Название статьи (на рус. языке)"></textarea>
+                                <textarea class="form-control"
+                                          rows="3"
+                                          name="article_name_ru"
+                                          :class="{'error':errors['article_name_ru']}"
+                                          @focus="$emit('update:errors', removeErrors($event.target))"
+                                          placeholder="Название статьи (на рус. языке)">123123</textarea>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group">
-                                <textarea class="form-control" rows="3" name="article_name_en" :class="{'error':errors['article_name_en']}" placeholder="Название статьи (на англ. языке)"></textarea>
+                                <textarea class="form-control"
+                                          rows="3"
+                                          name="article_name_en"
+                                          :class="{'error':errors['article_name_en']}"
+                                          @focus="$emit('update:errors', removeErrors($event.target))"
+                                          placeholder="Название статьи (на англ. языке)">333333</textarea>
                             </div>
                         </div>
                     </div>
@@ -247,12 +173,22 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group">
-                                <textarea class="form-control" rows="3" name="annot_ru" :class="{'error':errors['annot_ru']}" placeholder="Аннотация к  статье (на англ. языке)"></textarea>
+                                <textarea class="form-control"
+                                          rows="3"
+                                          name="annot_ru"
+                                          :class="{'error':errors['annot_ru']}"
+                                          @focus="$emit('update:errors', removeErrors($event.target))"
+                                          placeholder="Аннотация к  статье (на англ. языке)">111111111</textarea>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group">
-                                <textarea class="form-control" rows="3" name="annot_en" :class="{'error':errors['annot_en']}" placeholder="Аннотация к  статье (на англ. языке)"></textarea>
+                                <textarea class="form-control"
+                                          rows="3"
+                                          name="annot_en"
+                                          :class="{'error':errors['annot_en']}"
+                                          @focus="$emit('update:errors', removeErrors($event.target))"
+                                          placeholder="Аннотация к  статье (на англ. языке)">gfgfdfgdfg</textarea>
                             </div>
                         </div>
                     </div>
@@ -261,17 +197,20 @@
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group">
                                 <label>Ключевые слова на русском языке</label>
-                                <input type="text" class="form-control" name="word_ru" placeholder="слово на рус. языке">
-                                <button type="button" class="btn btn-outline-secondary mt-2 pt-0 pb-0 pl-2 pr-2 pull-right">
-                                    <span class="fa fa-plus mr-2"></span>добавить слово</button>
+
+                                <list-input-component input_name="word_ru"
+                                                      button="добавить слово"
+                                                      placeholder="слово на рус. языке"
+                                                      :errors="errors"></list-input-component>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group">
                                 <label>Ключевые слова на английском языке</label>
-                                <input type="text" class="form-control" name="word_en" placeholder="слово на англ. языке">
-                                <button type="button" class="btn btn-outline-secondary mt-2 pt-0 pb-0 pl-2 pr-2 pull-right">
-                                    <span class="fa fa-plus mr-2"></span>добавить слово</button>
+                                <list-input-component input_name="word_en"
+                                                      button="добавить слово"
+                                                      placeholder="слово на англ. языке"
+                                                      :errors="errors"></list-input-component>
                             </div>
                         </div>
 
@@ -279,37 +218,69 @@
                     </div>
 
                     <div class="row mt-3">
-                        <div class="col-lg-3">
-                            <div class="col-lg-12 form-group">
-                                <input type="text" class="form-control" name="udk" placeholder="Рубрикатор УДК">
+                        <div class="col-lg-6">
+                            <div class="col-lg-12 form-group d-flex">
+                                <span class="w-50" style="line-height: 34px;">Рубрикатор УДК</span>
+                                <input type="text"
+                                       class="form-control"
+                                       name="udk"
+                                       :class="{'error':errors['udk']}"
+                                       @focus="$emit('update:errors', removeErrors($event.target))"
+                                       value="00000"
+                                       placeholder="Рубрикатор УДК">
                             </div>
                         </div>
 
-                        <div class="col-lg-3">
-                            <div class="col-lg-12 form-group">
-                                <input type="text" class="form-control" name="bbk" placeholder="Рубрикатор ББК">
-                            </div>
-                        </div>
 
                         <div class="col-lg-12 mt-3">
                             <div class="col-lg-12 form-group d-flex">
                                 <label class="mr-2">Язык текста статьи</label>
                                 <div class="ml-5">
                                     <div class="form-check ">
-                                        <input class="form-check-input" type="radio" name="ru" id="exampleRadios1" value="option1" checked>
-                                        <label class="form-check-label" for="exampleRadios1">русский</label>
+                                        <input class="form-check-input" type="radio" name="language" id="ru" value="ru" checked>
+                                        <label class="form-check-label" for="ru" style="cursor:pointer">русский</label>
                                     </div>
                                 </div>
 
                                 <div class="ml-5">
                                     <div class="form-check ">
-                                        <input class="form-check-input" type="radio" name="en" id="exampleRadios1" value="option1">
-                                        <label class="form-check-label" for="exampleRadios1">английский</label>
+                                        <input class="form-check-input" type="radio" name="language" id="en" value="en">
+                                        <label class="form-check-label" for="en" style="cursor:pointer">английский</label>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+
+                        <div class="col-lg-6">
+                            <div class="col-lg-12 form-group">
+                                <div class="form-group">
+                                    <label for="tex">Тезис в формате .tex</label>
+                                    <input type="file" class="form-control-file" id="tex" name="tex" :class="{'error':errors['tex']}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="col-lg-12 form-group">
+                                <div class="form-group">
+                                    <label for="tex">Тезис в формате .pdf</label>
+                                    <input type="file" class="form-control-file" id="tex" name="pdf" :class="{'error':errors['pdf']}">
+                                </div>
+                            </div>
+                        </div>
+
+                        {{--<div class="col-lg-12">
+                            <div class="col-lg-3">
+
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label for="pdf">Тезис в формате .pdf</label>
+                                    <input type="file" class="form-control-file" id="pdf">
+                                </div>
+                            </div>
+                        </div>--}}
                     </div>
 
                     <h5 class="text-center mt-4">Участие в конференции</h5>
@@ -317,28 +288,30 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group has-feedback">
-                                <select class="form-control" placeholder="секция" name="section">
+                                <select class="form-control"
+                                        placeholder="секция"
+                                        name="section"
+                                        @focus="$emit('update:errors', removeErrors($event.target))"
+                                        :class="{'error':errors['section']}">
                                     <option value="">Секция</option>
-                                    <option value="1">1. Спектральная теория дифференциальных операторов</option>
-                                    <option value="2">2. Теория функций и функционального анализа</option>
-                                    <option value="3">3. Краевые задачи для дифференциальных уравнений</option>
-                                    <option value="4">4. Обратные и некорректные задачи</option>
-                                    <option value="5">5. Уравнения смешанного типа</option>
-                                    <option value="6">6. Математические проблемы механики</option>
-                                    <option value="7">7. Прикладные задачи термодинамики и теплофизики</option>
-                                    <option value="8">8. Математическое моделирование сложных процессов и систем</option>
-                                    <option value="9">9. Актуальные проблемы математического и физического образования в Вузе</option>
+                                    @foreach(\App\Section::get() as $section)
+                                    <option value="{{ $section->id }}">{{ $section->id.'.  '.$section->name }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
 
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group has-feedback">
-                                <select class="form-control" placeholder="форма участия" name="form">
+                                <select class="form-control"
+                                        placeholder="форма участия"
+                                        name="form"
+                                        @focus="$emit('update:errors', removeErrors($event.target))"
+                                        :class="{'error':errors['form']}">
                                     <option value="">Форма участия</option>
-                                    <option value="1">Выступление с пленарным докладом</option>
-                                    <option value="2">Выступление с секционным докладом</option>
-                                    <option value="3">Представление стендового доклада</option>
+                                    @foreach(\App\Form::get() as $form)
+                                        <option value="{{ $form->id }}">{{ $form->id.'.  '.$form->name }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -350,19 +323,30 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" name="phone" placeholder="Телефон">
+                                <input type="text"
+                                       class="form-control has-feedback-left"
+                                       data-masked= "(999)999-9999"
+                                       :class="{'error':errors['phone']}"
+                                       @focus="$emit('update:errors', removeErrors($event.target))"
+                                       name="phone"
+                                       placeholder="Телефон">
                                 <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
                             </div>
                         </div>
 
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" name="email" placeholder="E-mail">
+                                <input type="text"
+                                       class="form-control has-feedback-left"
+                                       :class="{'error':errors['email']}"
+                                       @focus="$emit('update:errors', removeErrors($event.target))"
+                                       name="email"
+                                       value="elm@ua.ru"
+                                       placeholder="E-mail">
                                 <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                             </div>
                         </div>
                     </div>
-
 
                     <div class="form-group">
                         <div class="col-lg-12">
@@ -391,6 +375,7 @@
         </div>
 
         <script src="{{ mix('/js/app.js') }}"></script>
+        <script src="{{ asset('/js/script.js') }}"></script>
 
     </body>
 </html>

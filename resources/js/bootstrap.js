@@ -10,6 +10,10 @@ try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
 
+    window.PNotify = require('pnotify/dist/es/PNotify').default;
+
+    require('inputmask/dist/jquery.inputmask');
+
     require('bootstrap');
 } catch (e) {}
 
