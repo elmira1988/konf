@@ -69,7 +69,7 @@
                     </h4>
                     <h6 class="text-center">12 – 15 сентября 2021 года<br>
                         <a class="" href="{{ asset('files/Informacionnoye_pismo_ru.pdf') }}">информационное письмо</a> &nbsp;&nbsp;&nbsp;
-                        <a class="" href="{{ asset('files/Informacionnoye_pismo_en.pdf') }}">information mail</a>
+                        <a class="" href="{{ asset('files/Informacionnoye_pismo_en.pdf') }}">information letter</a>
                     </h6>
 
                      <div class="row ">
