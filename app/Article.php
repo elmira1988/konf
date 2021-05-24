@@ -10,7 +10,10 @@ class Article extends Model
 
     protected $casts = [
         'word_ru' => 'array',
-        'word_en' => 'array'
+        'word_en' => 'array',
+        'tex' => 'array',
+        'pdf' => 'array',
+        'created_at' => 'datetime:d.m.Y'
     ];
 
     public function form()

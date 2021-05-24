@@ -19,4 +19,9 @@ Route::get('/math-21', function () {
     return view('welcome');
 });
 
+Route::get('/articles-21', function () {
+    return view('articles');
+});
+
+
 Route::resource("articles","ArticleController");

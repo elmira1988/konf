@@ -46,14 +46,18 @@ class ArticleController extends Controller
     {
 
         $tex = $request->file('tex');
-        $tex_path = 'public/tex/'.time();
+        $folder_tex = time();
+        $path_tex = 'tex/'.$folder_tex;
+        $file_tex = $tex->getClientOriginalName();
 
-        $tex->storeAs($tex_path,$tex->getClientOriginalName());
+        $tex->storeAs('public/'.$path_tex,$file_tex);
 
         $pdf = $request->file('pdf');
-        $pdf_path = 'public/pdf/'.time();
+        $folder_pdf = time();
+        $path_pdf = 'pdf/'.$folder_pdf;
+        $file_pdf = $pdf->getClientOriginalName();
 
-        $tex->storeAs($pdf_path,$pdf->getClientOriginalName());
+        $tex->storeAs('public/'.$path_pdf,$file_pdf);
 
 
         $article = new Article();
@@ -65,8 +69,9 @@ class ArticleController extends Controller
         $article->word_ru = json_encode($request->word_ru, JSON_UNESCAPED_UNICODE);
         $article->word_en = json_encode($request->word_en, JSON_UNESCAPED_UNICODE);
         $article->udk = $request->udk;
-        $article->tex = $tex_path.'/'.$tex->getClientOriginalName();
-        $article->pdf = $pdf_path.'/'.$pdf->getClientOriginalName();
+        $article->tex = json_encode(array($file_tex,'storage/'.$path_tex.'/'.$file_tex), JSON_UNESCAPED_UNICODE);
+        $article->pdf = json_encode(array($file_pdf,'storage/'.$path_pdf.'/'.$file_pdf), JSON_UNESCAPED_UNICODE);
+        $article->node = $request->node;
         $article->language = $request->language;
         $article->section()->associate(Section::find($request->section));
         $article->form()->associate(Form::find($request->form));

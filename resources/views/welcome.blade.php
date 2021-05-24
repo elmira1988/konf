@@ -23,7 +23,7 @@
 
 
     <!-- Модальное окно -->
-    <div class="modal" tabindex="-1" role="dialog" id="sendok">
+    <div class="modal" tabindex="-1" role="dialog" id="sendok" data-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body pb-0 text-center">
@@ -163,8 +163,8 @@
                     <div class="col-lg-12">
                         <p class="alert alert-warning" role="alert">
                             <span class="fa fa-exclamation-triangle"></span> Внимание! Все поля, указанные ниже, обязательны к заполнению (кроме поля "Отчество")!<br>
-                            В поле "Место работы" указывается только наименование организации, данные о ее местонахождении заполняются в строке "Адрес"<br>
-                            Поля "Учёная степень", "Учёное звание", "Должность" автора (авторов)  указываются без сокращений (на рус. и англ. яз.)
+                            В поле "Место работы" указывается только наименование организации, данные о ее местонахождении заполняются в строке "Адрес" (необходимо указать страну и город)<br>
+                            Поля "Учёная степень", "Учёное звание", "Должность" автора/авторов  указываются без сокращений (на рус. и англ. яз.)
                             </p>
                     </div>
 
@@ -187,7 +187,7 @@
                                           name="article_name_ru"
                                           :class="{'error':errors['article_name_ru']}"
                                           @focus="$emit('update:errors', removeErrors($event.target))"
-                                          placeholder="Название статьи (на рус. языке)">123123</textarea>
+                                          placeholder="Название статьи (на рус. языке)"></textarea>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -197,7 +197,7 @@
                                           name="article_name_en"
                                           :class="{'error':errors['article_name_en']}"
                                           @focus="$emit('update:errors', removeErrors($event.target))"
-                                          placeholder="Название статьи (на англ. языке)">333333</textarea>
+                                          placeholder="Название статьи (на англ. языке)"></textarea>
                             </div>
                         </div>
                     </div>
@@ -210,7 +210,7 @@
                                           name="annot_ru"
                                           :class="{'error':errors['annot_ru']}"
                                           @focus="$emit('update:errors', removeErrors($event.target))"
-                                          placeholder="Аннотация к  статье (на англ. языке)">111111111</textarea>
+                                          placeholder="Аннотация к  статье (на англ. языке)"></textarea>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -220,7 +220,7 @@
                                           name="annot_en"
                                           :class="{'error':errors['annot_en']}"
                                           @focus="$emit('update:errors', removeErrors($event.target))"
-                                          placeholder="Аннотация к  статье (на англ. языке)">gfgfdfgdfg</textarea>
+                                          placeholder="Аннотация к  статье (на англ. языке)"></textarea>
                             </div>
                         </div>
                     </div>
@@ -258,7 +258,6 @@
                                        name="udk"
                                        :class="{'error':errors['udk']}"
                                        @focus="$emit('update:errors', removeErrors($event.target))"
-                                       value="00000"
                                        placeholder="Рубрикатор УДК">
                             </div>
                         </div>
@@ -300,19 +299,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        {{--<div class="col-lg-12">
-                            <div class="col-lg-3">
-
-                            </div>
-
-                            <div class="col-lg-3">
-                                <div class="form-group">
-                                    <label for="pdf">Тезис в формате .pdf</label>
-                                    <input type="file" class="form-control-file" id="pdf">
-                                </div>
-                            </div>
-                        </div>--}}
                     </div>
 
                     <h5 class="text-center mt-4">Участие в конференции</h5>
@@ -373,9 +359,22 @@
                                        :class="{'error':errors['email']}"
                                        @focus="$emit('update:errors', removeErrors($event.target))"
                                        name="email"
-                                       value="elm@ua.ru"
                                        placeholder="E-mail">
                                 <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="col-lg-12 form-group">
+                                <textarea class="form-control"
+                                          rows="3"
+                                          name="node"
+                                          :class="{'error':errors['node']}"
+                                          @focus="$emit('update:errors', removeErrors($event.target))"
+                                          placeholder="Комментарий"></textarea>
                             </div>
                         </div>
                     </div>

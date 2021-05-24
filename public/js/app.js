@@ -2087,20 +2087,20 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       authors: [{
-        'surname_ru': '1',
-        'name_ru': '2',
-        'patronymic_ru': '3',
-        'work_ru': '3',
-        'adress_ru': '4',
-        'status_ru': '5',
+        'surname_ru': '',
+        'name_ru': '',
+        'patronymic_ru': '',
+        'work_ru': '',
+        'adress_ru': '',
+        'status_ru': '',
         'degree': '',
         'rank': '',
-        'surname_en': '4',
-        'name_en': '5',
-        'patronymic_en': '4',
-        'work_en': '4',
-        'adress_en': '5',
-        'status_en': '4'
+        'surname_en': '',
+        'name_en': '',
+        'patronymic_en': '',
+        'work_en': '',
+        'adress_en': '',
+        'status_en': ''
       }]
     };
   },
@@ -41135,7 +41135,7 @@ var render = function() {
                 attrs: {
                   type: "text",
                   name: "adress_ru[]",
-                  placeholder: "Адрес (на рус. языке)"
+                  placeholder: "Адрес - страна/город (на рус. языке)"
                 },
                 domProps: { value: author.adress_ru },
                 on: {
@@ -41257,7 +41257,7 @@ var render = function() {
                 attrs: {
                   type: "text",
                   name: "surname_en[]",
-                  placeholder: "Фамилия (на анг. языке)"
+                  placeholder: "Фамилия (на англ. языке)"
                 },
                 domProps: { value: author.surname_en },
                 on: {
@@ -41291,7 +41291,7 @@ var render = function() {
                 attrs: {
                   type: "text",
                   name: "name_en[]",
-                  placeholder: "Имя (на анг. языке)"
+                  placeholder: "Имя (на англ. языке)"
                 },
                 domProps: { value: author.name_en },
                 on: {
@@ -41324,7 +41324,7 @@ var render = function() {
                 attrs: {
                   type: "text",
                   name: "patronymic_en[]",
-                  placeholder: "Отчество (на анг. языке)"
+                  placeholder: "Отчество (на англ. языке)"
                 },
                 domProps: { value: author.patronymic_en },
                 on: {
@@ -41358,7 +41358,7 @@ var render = function() {
                 attrs: {
                   type: "text",
                   name: "work_en[]",
-                  placeholder: "Место работы (на анг. языке)"
+                  placeholder: "Место работы (на англ. языке)"
                 },
                 domProps: { value: author.work_en },
                 on: {
@@ -41392,7 +41392,7 @@ var render = function() {
                 attrs: {
                   type: "text",
                   name: "adress_en[]",
-                  placeholder: "Адрес (на анг. языке)"
+                  placeholder: "Адрес - страна/город (на англ. языке)"
                 },
                 domProps: { value: author.adress_en },
                 on: {
@@ -41426,7 +41426,7 @@ var render = function() {
                 attrs: {
                   type: "text",
                   name: "status_en[]",
-                  placeholder: "Должность (на анг. языке)"
+                  placeholder: "Должность (на англ. языке)"
                 },
                 domProps: { value: author.status_en },
                 on: {
@@ -54235,8 +54235,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\Arimle\Webserver\OSPanel\domains\konf\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! E:\Arimle\Webserver\OSPanel\domains\konf\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! F:\WebServer\OSPanel\domains\konf\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! F:\WebServer\OSPanel\domains\konf\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -55,7 +55,7 @@
                            name="adress_ru[]"
                            v-model="author.adress_ru"
                            :class="{'error':errors['adress_ru.'+index]}"
-                           placeholder="Адрес (на рус. языке)">
+                           placeholder="Адрес - страна/город (на рус. языке)">
                     <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
                 </div>
 
@@ -106,7 +106,7 @@
                            name="surname_en[]"
                            v-model="author.surname_en"
                            :class="{'error':errors['surname_en.'+index]}"
-                           placeholder="Фамилия (на анг. языке)">
+                           placeholder="Фамилия (на англ. языке)">
                     <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                 </div>
 
@@ -116,7 +116,7 @@
                            name="name_en[]"
                            v-model="author.name_en"
                            :class="{'error':errors['name_en.'+index]}"
-                           placeholder="Имя (на анг. языке)">
+                           placeholder="Имя (на англ. языке)">
                     <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                 </div>
 
@@ -125,7 +125,7 @@
                            class="form-control has-feedback-left"
                            name="patronymic_en[]"
                            v-model="author.patronymic_en"
-                           placeholder="Отчество (на анг. языке)">
+                           placeholder="Отчество (на англ. языке)">
                     <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                 </div>
 
@@ -135,7 +135,7 @@
                            name="work_en[]"
                            v-model="author.work_en"
                            :class="{'error':errors['work_en.'+index]}"
-                           placeholder="Место работы (на анг. языке)">
+                           placeholder="Место работы (на англ. языке)">
                     <span class="fa fa-building form-control-feedback left" aria-hidden="true"></span>
                 </div>
 
@@ -145,7 +145,7 @@
                            name="adress_en[]"
                            v-model="author.adress_en"
                            :class="{'error':errors['adress_en.'+index]}"
-                           placeholder="Адрес (на анг. языке)">
+                           placeholder="Адрес - страна/город (на англ. языке)">
                     <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
                 </div>
 
@@ -155,7 +155,7 @@
                            name="status_en[]"
                            :class="{'error':errors['status_en.'+index]}"
                            v-model="author.status_en"
-                           placeholder="Должность (на анг. языке)">
+                           placeholder="Должность (на англ. языке)">
                     <span class="fa fa-star form-control-feedback left" aria-hidden="true"></span>
                 </div>
 
@@ -177,20 +177,20 @@
         name: "AuthorsComponent",
         data: function(){
             return{
-                authors:[{'surname_ru': '1',
-                    'name_ru':'2',
-                    'patronymic_ru':'3',
-                    'work_ru':'3',
-                    'adress_ru':'4',
-                    'status_ru':'5',
+                authors:[{'surname_ru': '',
+                    'name_ru':'',
+                    'patronymic_ru':'',
+                    'work_ru':'',
+                    'adress_ru':'',
+                    'status_ru':'',
                     'degree':'',
                     'rank':'',
-                    'surname_en': '4',
-                    'name_en':'5',
-                    'patronymic_en':'4',
-                    'work_en':'4',
-                    'adress_en':'5',
-                    'status_en':'4'}]
+                    'surname_en': '',
+                    'name_en':'',
+                    'patronymic_en':'',
+                    'work_en':'',
+                    'adress_en':'',
+                    'status_en':''}]
             }
         },
         props:{
