@@ -12,7 +12,6 @@
 */
 
 Route::get('/', function () {
-    echo 'Hellow, World!';
 });
 
 Route::get('/math-21', function () {
