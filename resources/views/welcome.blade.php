@@ -29,7 +29,7 @@
                 <div class="modal-body pb-0 text-center">
                     <div class="alert alert-success mt-1" role="alert">
                         <span class="alert-icon fa fa-thumbs-up"></span>
-                        Ваша заявка успешно отправлена! <br>Ожидайте письмо с одтверждением на указанную почту!
+                        Ваша заявка успешно отправлена! <br>Ожидайте письмо с подтверждением на указанную почту!
                     </div>
                 </div>
                 <div class="modal-footer">
