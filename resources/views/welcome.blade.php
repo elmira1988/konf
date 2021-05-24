@@ -171,7 +171,7 @@
                 </div>
 
 
-                <form class="form-horizontal form-label-left mt-3" action="{{ route('articles.store') }}" enctype = 'multipart/form-data'>
+                <form class="form-horizontal form-label-left mt-3" action="{{ route('articles.store') }}" enctype = 'multipart/form-data' method="POST">
                     <h5 class="text-center">Авторы</h5>
                     <authors-component :degree="{{ json_encode(\App\Degree::get()) }}"
                                        :ranks="{{ json_encode(\App\Rank::get()) }}"

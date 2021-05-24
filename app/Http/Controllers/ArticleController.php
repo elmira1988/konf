@@ -50,14 +50,14 @@ class ArticleController extends Controller
         $path_tex = 'tex/'.$folder_tex;
         $file_tex = $tex->getClientOriginalName();
 
-        $tex->storeAs('public/'.$path_tex,$file_tex);
+        Storage::disk('local')->put( 'public/'.$path_tex.'/'.$file_tex, file_get_contents($tex));
 
         $pdf = $request->file('pdf');
         $folder_pdf = time();
         $path_pdf = 'pdf/'.$folder_pdf;
         $file_pdf = $pdf->getClientOriginalName();
 
-        $tex->storeAs('public/'.$path_pdf,$file_pdf);
+        Storage::disk('local')->put( 'public/'.$path_pdf.'/'.$file_pdf, file_get_contents($pdf));
 
 
         $article = new Article();
