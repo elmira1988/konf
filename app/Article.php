@@ -6,13 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    protected $fillable = ['name_ru','name_en','annot_ru','annot_en','word_ru','word_en','udk','bbk','language','phone','email'];
+    protected $fillable = ['name_ru','name_en','annot_ru','annot_en','word_ru','word_en','udk','files','language','phone','email'];
 
     protected $casts = [
         'word_ru' => 'array',
         'word_en' => 'array',
-        'tex' => 'array',
-        'pdf' => 'array',
         'created_at' => 'datetime:d.m.Y'
     ];
 

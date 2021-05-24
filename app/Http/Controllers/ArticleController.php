@@ -45,7 +45,7 @@ class ArticleController extends Controller
     public function store(ArticleRequest $request)
     {
 
-        $tex = $request->file('tex');
+        /*$tex = $request->file('tex');
         $folder_tex = time();
         $path_tex = 'tex/'.$folder_tex;
         $file_tex = $tex->getClientOriginalName();
@@ -57,8 +57,15 @@ class ArticleController extends Controller
         $path_pdf = 'pdf/'.$folder_pdf;
         $file_pdf = $pdf->getClientOriginalName();
 
-        Storage::disk('local')->put( 'public/'.$path_pdf.'/'.$file_pdf, file_get_contents($pdf));
+        Storage::disk('local')->put( 'public/'.$path_pdf.'/'.$file_pdf, file_get_contents($pdf));*/
 
+
+        $file = $request->file('files');
+        $folder = time();
+        $path = 'files/'.$folder;
+        $file_name = $file->getClientOriginalName();
+
+        $file->storeAs('public/'.$path, $file_name);
 
         $article = new Article();
 
@@ -69,8 +76,9 @@ class ArticleController extends Controller
         $article->word_ru = json_encode($request->word_ru, JSON_UNESCAPED_UNICODE);
         $article->word_en = json_encode($request->word_en, JSON_UNESCAPED_UNICODE);
         $article->udk = $request->udk;
-        $article->tex = json_encode(array($file_tex,'storage/'.$path_tex.'/'.$file_tex), JSON_UNESCAPED_UNICODE);
-        $article->pdf = json_encode(array($file_pdf,'storage/'.$path_pdf.'/'.$file_pdf), JSON_UNESCAPED_UNICODE);
+       /* $article->tex = json_encode(array($file_tex,'storage/'.$path_tex.'/'.$file_tex), JSON_UNESCAPED_UNICODE);
+        $article->pdf = json_encode(array($file_pdf,'storage/'.$path_pdf.'/'.$file_pdf), JSON_UNESCAPED_UNICODE);*/
+        $article->files = 'storage/'.$path.'/'.$file_name;
         $article->node = $request->node;
         $article->language = $request->language;
         $article->section()->associate(Section::find($request->section));

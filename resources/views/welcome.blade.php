@@ -68,7 +68,8 @@
                         посвященная 70-летию чл.-корр. АН РБ К.Б. Сабитова
                     </h4>
                     <h6 class="text-center">12 – 15 сентября 2021 года<br>
-                        <a href="{{ asset('files/Informacionnoye_pismo.pdf') }}">информационное письмо</a>
+                        <a class="" href="{{ asset('files/Informacionnoye_pismo_ru.pdf') }}">информационное письмо</a> &nbsp;&nbsp;&nbsp;
+                        <a class="" href="{{ asset('files/Informacionnoye_pismo_en.pdf') }}">information mail</a>
                     </h6>
 
                      <div class="row ">
@@ -145,7 +146,7 @@
                 </div>
 
                 <h4 class="mt-4 text-center font-weight-bold">Представление материалов</h4>
-                <p class="text-justify mb-1">Для участия в работе конференции необходимо <b>до 30 июня 2021 года</b> отправить заявку, заполнив все поля формы, указанной ниже (материал доклада прикрепляете тамже)</p>
+                <p class="text-justify mb-1">Для участия в работе конференции необходимо <b>до 30 июня 2021 года</b> отправить заявку и материалы доклада, оформленные по указнным ниже формам.</p>
                 <p class="text-justify mb-1">Материалы докладов (tex- и pdf-файлы) объемом <b>до 5 полных страниц</b> должны быть оформленные в соответствии с требованиями в текстовом редакторе LaTeX. <br>
                 Статьи, подготовленные в текстовом редакторе Word, рекомендуется транслировать в формат LaTeX с помощью транслятора GrindEQ Math. <br>
                 Материалы докладов участников будут опубликованы  в сборнике научных трудов конференции. Сборник будет размещен в системе РИНЦ.<br>
@@ -162,9 +163,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="alert alert-warning" role="alert">
-                            <span class="fa fa-exclamation-triangle"></span> Внимание! Все поля, указанные ниже, обязательны к заполнению (кроме поля "Отчество")!<br>
+                            <span class="fa fa-exclamation-triangle"></span> Внимание!<br>
+                            Все поля, указанные ниже, обязательны к заполнению (кроме поля "Отчество")!<br>
                             В поле "Место работы" указывается только наименование организации, данные о ее местонахождении заполняются в строке "Адрес" (необходимо указать страну и город)<br>
-                            Поля "Учёная степень", "Учёное звание", "Должность" автора/авторов  указываются без сокращений (на рус. и англ. яз.)
+                            Поля "Учёная степень", "Учёное звание", "Должность" автора/авторов  указываются без сокращений (на рус. и англ. яз.)<br>
+                            Материалы доклада загружаются в виде архива ( *.zip, *.rar)
                             </p>
                     </div>
 
@@ -210,7 +213,7 @@
                                           name="annot_ru"
                                           :class="{'error':errors['annot_ru']}"
                                           @focus="$emit('update:errors', removeErrors($event.target))"
-                                          placeholder="Аннотация к  статье (на англ. языке)"></textarea>
+                                          placeholder="Аннотация к  статье (на рус. языке)"></textarea>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -285,17 +288,8 @@
                         <div class="col-lg-6">
                             <div class="col-lg-12 form-group">
                                 <div class="form-group">
-                                    <label for="tex">Тезис в формате .tex</label>
-                                    <input type="file" class="form-control-file" id="tex" name="tex" :class="{'error':errors['tex']}">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="col-lg-12 form-group">
-                                <div class="form-group">
-                                    <label for="pdf">Тезис в формате .pdf</label>
-                                    <input type="file" class="form-control-file" id="pdf" name="pdf" :class="{'error':errors['pdf']}">
+                                    <label for="tex">Материалы доклада ( *.zip, *.rar)</label>
+                                    <input type="file" class="form-control-file" id="tex" name="files" :class="{'error':errors['files']}">
                                 </div>
                             </div>
                         </div>

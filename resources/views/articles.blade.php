@@ -120,8 +120,7 @@
 
             <tr>
                 <td colspan="2">
-                    <p>{{ json_decode($article->tex)[0] }} <a href="{{ json_decode($article->tex)[1] }}">скачать</a></p>
-                    <p>{{ json_decode($article->pdf)[0] }} <a href="{{ json_decode($article->pdf)[1] }}">скачать</a></p>
+                    <p> Материалы доклада <a href="{{ $article->files }}">скачать</a></p>
                 </td>
             </tr>
 

@@ -23,8 +23,8 @@ class CreateArticlesTable extends Migration
             $table->text('word_en');//Ключевые слова на англ. языке
             $table->string('udk')->default('');//УДК
             $table->string('language');//Язык
-            $table->string('tex');//Файл .tex
-            $table->string('pdf');//Файл .pdf
+            $table->string('files');//Материалы доклада
+            $table->text('node');//Комментарий
 
             $table->bigInteger('section_id')->unsigned();
             $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade')->onUpdate('cascade');//Секция
