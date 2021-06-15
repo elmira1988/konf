@@ -127,6 +127,10 @@
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
     </include_path>
   </component>
   <component name="ProjectId" id="1skETIREU7GYA9lKUgc0mJEkjEL" />
@@ -184,7 +188,11 @@
       <workItem from="1621578355960" duration="18610000" />
       <workItem from="1621608464245" duration="6514000" />
       <workItem from="1621827859678" duration="12996000" />
-      <workItem from="1621850996144" duration="4919000" />
+      <workItem from="1621850996144" duration="5518000" />
+      <workItem from="1622003752109" duration="220000" />
+      <workItem from="1622099037599" duration="1277000" />
+      <workItem from="1622444111714" duration="52000" />
+      <workItem from="1623750524868" duration="458000" />
     </task>
     <servers />
   </component>

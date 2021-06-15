@@ -53904,7 +53904,7 @@ var app = new Vue((_Vue = {
             hide: true,
             animation: 'fade',
             animateSpeed: '250ms',
-            delay: 4000,
+            delay: 400000,
             remove: true,
             width: 700,
             styling: 'bootstrap4',
