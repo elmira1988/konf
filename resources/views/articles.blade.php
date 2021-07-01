@@ -42,14 +42,20 @@
             <tr>
                 <td>Ключевые слова</td>
                 <td>
+
+                    @if(json_decode($article->word_ru))
                     <p> @foreach(json_decode($article->word_ru) as $key => $word)
                             @if($key>0), @endif {{$word}}
                         @endforeach
                     </p>
+                    @endif
+
+                    @if(json_decode($article->word_en))
                     <p> @foreach(json_decode($article->word_en) as $key => $word)
                             @if($key>0), @endif {{$word}}
                         @endforeach
                     </p>
+                        @endif
                 </td>
             </tr>
 

@@ -71,7 +71,7 @@
                         <a class="" href="{{ asset('files/Informacionnoye_pismo_ru.pdf') }}">информационное письмо</a> &nbsp;&nbsp;&nbsp;
                         <a class="" href="{{ asset('files/Informacionnoye_pismo_en.pdf') }}">information letter</a>
                     </h6>
-
+                    <a href="{{ asset('files/Spisok_na_01_07_2021.pdf') }}" class="text-center d-block">Список зарегистрированных участников</a>
                      <div class="row ">
                          <div class="col-lg-3 col-md-6 text-center pl-0">
                              <button type="button" class="btn btn-link" data-toggle="modal" data-target="#orgkomitet">ОРГКОМИТЕТ</button>
@@ -156,7 +156,7 @@
                     Программный комитет оставляет за собой право не рассматривать статьи, оформленные с нарушением приведенных правил.</p>
                 <p class="text-justify mb-1"><b>До 1 августа 2021 года</b> оргкомитет обязуется
                 уведомить участников о принятии материалов и включении доклада в программу конференции с приложением электронной версии программы.</p>
-
+                <p class="font-weight-bold" style="color:red">Заявки и материалы доклада можно присылать до 15 июля!</p>
 
                 <h4 class="mt-4 text-center font-weight-bold">Отправить заявку на участие</h4>
 
