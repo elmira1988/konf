@@ -73,6 +73,8 @@
                     </h6>
                     <a href="{{ asset('files/Spisok_na_09_08_2021.pdf') }}" class="text-center d-block">Список зарегистрированных участников</a>
                     <a href="{{ asset('files/Programma_konferencii.pdf') }}" class="text-center d-block">Программа конференции</a>
+                    <a href="https://us02web.zoom.us/j/85063108408?pwd=S3VRa3BJa0xCZXkzTVNERGg5ajhHQT09" class="btn btn-info d-block mt-3 text-white">Ссылка на вход в Zoom</a>
+                    <p class="text-center">Код доступа: <b> 232779</b><br> Идентификатор конференции: <b>850 6310 8408</b></p>
                      <div class="row ">
                          <div class="col-lg-3 col-md-6 text-center pl-0">
                              <button type="button" class="btn btn-link" data-toggle="modal" data-target="#orgkomitet">ОРГКОМИТЕТ</button>
