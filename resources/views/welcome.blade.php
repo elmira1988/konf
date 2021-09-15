@@ -72,9 +72,20 @@
                         <a class="" href="{{ asset('files/Informacionnoye_pismo_en.pdf') }}">information letter</a>
                     </h6>
                     <a href="{{ asset('files/Spisok_na_09_08_2021.pdf') }}" class="text-center d-block">Список зарегистрированных участников</a>
-                    <a href="{{ asset('files/Programma_konferencii.pdf') }}" class="text-center d-block">Программа конференции</a>
+                    {{--<a href="{{ asset('files/Programma_konferencii.pdf') }}" class="text-center d-block">Программа конференции</a>
                     <a href="https://us02web.zoom.us/j/85063108408?pwd=S3VRa3BJa0xCZXkzTVNERGg5ajhHQT09" class="btn btn-info d-block mt-3 text-white">Ссылка на вход в Zoom</a>
-                    <p class="text-center">Код доступа: <b> 232779</b><br> Идентификатор конференции: <b>850 6310 8408</b></p>
+                    <p class="text-center">Код доступа: <b> 232779</b><br> Идентификатор конференции: <b>850 6310 8408</b></p>--}}
+                    <h3 class="text-center">Материалы конференции</h3>
+                    <div class="d-flex justify-content-center">
+                        <h5 class="text-center text-bold">
+                            <i class="fa fa-file-pdf-o mr-2 pl-4"  style="color: darkred"></i>Том 1 (<a href="{{ asset('files/Tom_1.pdf') }}" class="d-inline-block">скачать</a>)
+                        </h5>
+                        <h5 class="text-center text-bold">
+                            <i class="fa fa-file-pdf-o mr-2 pl-5" style="color: darkred"></i>Том 2 (<a href="{{ asset('files/Tom_2.pdf') }}" class="d-inline-block">скачать</a>)
+                        </h5>
+                    </div>
+
+
                      <div class="row ">
                          <div class="col-lg-3 col-md-6 text-center pl-0">
                              <button type="button" class="btn btn-link" data-toggle="modal" data-target="#orgkomitet">ОРГКОМИТЕТ</button>
