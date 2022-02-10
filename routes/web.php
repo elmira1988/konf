@@ -24,3 +24,8 @@ Route::get('/articles-21', function () {
 
 
 Route::resource("articles","ArticleController");
+
+
+Route::get('/child-22', function () {
+    return view('child_22.welcome');
+});

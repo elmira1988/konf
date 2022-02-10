@@ -15,7 +15,9 @@ class DatabaseSeeder extends Seeder
             SectionSeeder::class,
             FormSeeder::class,
             DegreeTableSeeder::class,
-            RanksTableSeeder::class
+            RanksTableSeeder::class,
+            ChildSectionsSeeder::class,
+            ChildFormsSeeder::class
         ]);
     }
 }
