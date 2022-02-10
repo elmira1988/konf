@@ -48,6 +48,11 @@
 @include('child_22.form_uchastiya')
 @include('child_22.pravila')
 
+@include('child_22.section1')
+@include('child_22.section2')
+@include('child_22.section3')
+@include('child_22.section4')
+
 <div class="flex-center position-ref full-height" id="app">
     <div class="container content mb-5" @submit="send_form">
         <div class="m-b-md mt-5">
@@ -60,7 +65,7 @@
             <h4 class="text-center mt-3 mb-0">
                 Всероссийская научно-практическая конференция
             </h4>
-            <h3 class="text-center font-weight-bold mb-0">«Здоровое, ответственное родительство - залог счасливого детства»</h3>
+            <h3 class="text-center font-weight-bold mb-0">«Здоровое, ответственное родительство - залог счастливого детства»</h3>
             <h6 class="text-center">15 апреля 2022 года<br>
                 <a class="" href="{{ asset('files/Informacionnoye_pismo_child_22.pdf') }}">информационное письмо</a> &nbsp;&nbsp;&nbsp;
             {{--<a href="{{ asset('files/Spisok_na_09_08_2021.pdf') }}" class="text-center d-block">Список зарегистрированных участников</a> --}}
@@ -100,56 +105,49 @@
         <h4 class="mt-4 text-center font-weight-bold">Cекции</h4>
 
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-6">
 
                 <div class="d-flex list-counter-square m-1">
                     <div class="p-2 mr-1">1</div>
-                    <div class="w-100 p-1 pl-2" style="height: 54px;"></div>
+                    <div class="w-100 p-1 pl-2" style="height: 54px;">
+                        <button type="button" class="btn btn-section" data-toggle="modal" data-target="#section1">
+                            СЕМЬЯ И РЕЛИГИЯ В ИСТОРИЧЕСКОМ, СОЦИОЛОГИЧЕСКОМ И ПСИХОЛОГИЧЕСКОМ АСПЕКТАХ
+                        </button>
+
+                    </div>
                 </div>
 
                 <div class="d-flex list-counter-square m-1">
                     <div class="p-2 mr-1">2</div>
-                    <div class="w-100 p-1 pl-2" style="height: 54px;"></div>
+                    <div class="w-100 p-1 pl-2" style="height: 54px;">
+                        <button type="button" class="btn btn-section" data-toggle="modal" data-target="#section2">
+                        АКТУАЛЬНЫЕ ПРОБЛЕМЫ СООТНОШЕНИЯ ПРАВА И МОРАЛИ В ОБЩЕСТВЕ
+                        </button>
+                    </div>
                 </div>
 
+            </div>
+
+            <div class="col-lg-6">
                 <div class="d-flex list-counter-square m-1">
                     <div class="p-2 mr-1">3</div>
-                    <div class="w-100 p-1 pl-2" style="height: 54px;"></div>
+                    <div class="w-100 p-1 pl-2" style="height: 54px;">
+                        <button type="button" class="btn btn-section" data-toggle="modal" data-target="#section3">
+                        ЗДОРОВОЕ ДОЛГОЛЕТИЕ И ПСИХОЛОГИЯ СЕМЕЙНЫХ ОТНОШЕНИЙ
+                        </button>
+                    </div>
                 </div>
 
-
-            </div>
-            <div class="col-lg-4">
                 <div class="d-flex list-counter-square m-1">
                     <div class="p-2 mr-1">4</div>
-                    <div class="w-100 p-1 pl-2" style="height: 54px;"></div>
+                    <div class="w-100 p-1 pl-2" style="height: 54px;">
+                        <button type="button" class="btn btn-section" data-toggle="modal" data-target="#section4">
+                            СЕМЬЯ И ТРАНСФОРМАЦИЯ ОТНОШЕНИЙ В УСЛОВИЯХ ЦИФРОВИЗАЦИИ ОБЩЕСТВА
+                        </button>
+                    </div>
                 </div>
 
-                <div class="d-flex list-counter-square m-1">
-                    <div class="p-2 mr-1">5</div>
-                    <div class="w-100 p-1 pl-2" style="height: 54px;"></div>
-                </div>
 
-                <div class="d-flex list-counter-square m-1">
-                    <div class="p-2 mr-1">6</div>
-                    <div class="w-100 p-1 pl-2" style="height: 54px;"></div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex list-counter-square m-1">
-                    <div class="p-2 mr-1">7</div>
-                    <div class="w-100 p-1 pl-2" style="height: 54px;"></div>
-                </div>
-
-                <div class="d-flex list-counter-square m-1">
-                    <div class="p-2 mr-1">8</div>
-                    <div class="w-100 p-1 pl-2" style="height: 54px;"></div>
-                </div>
-
-                <div class="d-flex list-counter-square m-1">
-                    <div class="p-2 mr-1">9</div>
-                    <div class="w-100 p-1 pl-2" style="height: 54px;"></div>
-                </div>
             </div>
         </div>
 
@@ -348,6 +346,13 @@
         background: #0f8b4c;
         color: white;
     }
+
+    .btn-section{
+        color: white;
+        text-align: left;
+        padding: 0px;
+    }
+
 </style>
 </body>
 </html>
