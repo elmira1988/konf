@@ -17,7 +17,7 @@ class CreateChildArticlesTable extends Migration
             $table->bigIncrements('id');
             $table->text('name');//Наименование статьи
             $table->string('files');//Материалы доклада
-            $table->text('node');//Комментарий
+            $table->text('node')->nullable(true);//Комментарий
 
             $table->bigInteger('section_id')->unsigned();
             $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade')->onUpdate('cascade');//Секция

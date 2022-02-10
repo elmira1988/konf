@@ -29,3 +29,4 @@ Route::resource("articles","ArticleController");
 Route::get('/child-22', function () {
     return view('child_22.welcome');
 });
+Route::resource("child_articles","ChildArticleController");

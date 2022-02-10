@@ -178,7 +178,7 @@
         </div>
 
 
-        <form class="form-horizontal form-label-left mt-3" action="{{ route('articles.store') }}" enctype = 'multipart/form-data' method="POST">
+        <form class="form-horizontal form-label-left mt-3" action="{{ route('child_articles.store') }}" enctype = 'multipart/form-data' method="POST">
             <h5 class="text-center">Авторы</h5>
             <child-authors-component :degree="{{ json_encode(\App\Degree::get()) }}"
                                :ranks="{{ json_encode(\App\Rank::get()) }}"
@@ -292,9 +292,9 @@
                 <div class="col-lg-12 form-group">
                     <button class="d-none" type="submit" id="send_form"></button>
 
-                    {{--<label class="group-5 btn btn-success pull-right" type="button"  for="send_form">
+                    <label class="group-5 btn btn-success pull-right" type="button"  for="send_form">
                         <span class="fa fa-paper-plane"></span> Отправить заявку
-                    </label>--}}
+                    </label>
                 </div>
             </div>
 
@@ -319,6 +319,10 @@
 <style>
     a{
         color:#16a15b!important;
+    }
+
+    a.btn-success{
+        color:white!important;
     }
 
     .btn-info {
@@ -356,9 +360,3 @@
 </style>
 </body>
 </html>
-<script>
-    import ChildAuthorsComponent from "../../js/components/ChildAuthorsComponent";
-    export default {
-        components: {ChildAuthorsComponent}
-    }
-</script>
