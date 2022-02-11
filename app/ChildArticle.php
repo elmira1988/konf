@@ -21,6 +21,6 @@ class ChildArticle extends Model
 
     public function authors()
     {
-        return $this->hasMany('App\ChildAuthors')->orderBy('created_at','desc');
+        return $this->hasMany('App\ChildAuthors','article_id')->orderBy('created_at','desc');
     }
 }
