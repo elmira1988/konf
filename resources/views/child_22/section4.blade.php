@@ -1,4 +1,4 @@
-\<!-- Модальное окно -->
+<!-- Модальное окно -->
 <div class="modal" tabindex="-1" role="dialog" id="section4">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">

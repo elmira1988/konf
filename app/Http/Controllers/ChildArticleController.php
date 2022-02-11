@@ -82,14 +82,14 @@ class ChildArticleController extends Controller
             $author->save();
 
         }
-
+/*
         $data = array('email' => $request->email);
 
         Mail::send('send_email', array(), function($message) use($data)
         {
             $message->to($data['email'])->subject('Международная конференция. Заявка успешно принята!');
         });
-
+*/
         return response()->json($request->all());
     }
 
