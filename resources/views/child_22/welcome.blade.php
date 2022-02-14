@@ -9,6 +9,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.ico') }}">
 </head>
 <body style="background: #d4e8de!important;">
 <div class="modal modal-preloader" tabindex="-1" aria-modal="true">
