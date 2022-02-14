@@ -58,8 +58,11 @@
     <div class="container content mb-5" @submit="send_form">
         <div class="m-b-md mt-5">
             <h6 class="text-center leader">
-                <span class="ml-1 fa fa-circle mr-1"></span>Министерство науки и высшего образования Российской Федерации<br>
-                <span class="ml-1 fa fa-circle mr-1"></span>Стерлитамакский филиал ФГБОУ ВО "Башкирский государственный университет"
+                <span class="ml-1 fa fa-circle mr-1"></span>Башкирский государственный университет (Стерлитамакский филиал)
+                <span class="ml-1 fa fa-circle mr-1"></span>Салаватская епархия Русской Православной Церкви<br>
+                <span class="ml-1 fa fa-circle mr-1"></span>Центр трансграничных правовых исследований Белгородского государственного, национального исследовательского университета
+                <span class="ml-1 fa fa-circle mr-1"></span>Межрегиональная просветительская общественная организация «Объединение православных ученых»<br>
+                <span class="ml-1 fa fa-circle mr-1"></span>Администрация муниципального района Куюргазинский район Республики БашкортостанСалаватская епархия Русской Православной Церкви
             </h6>
 
 
@@ -300,6 +303,33 @@
             </div>
 
         </form>
+
+        <div class="row mt-5">
+            <div class="col-lg-3">
+                <img src="{{ asset('files/BashGU.png') }}" class="img-fluid m-auto d-block p-2" style="max-height: 120px;">
+            </div>
+
+            <div class="col-lg-3">
+                <img src="{{ asset('files/prosvet_org.png') }}" class="img-fluid m-auto d-block p-2" style="max-height: 120px;">
+            </div>
+
+            <div class="col-lg-6">
+
+                <img src="{{ asset('files/belgorod.png') }}" class="img-fluid m-auto d-block p-2" style="max-height: 120px;">
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-lg-3">
+                <img src="{{ asset('files/Eparhiya.png') }}" class="img-fluid m-auto d-block p-2" style="max-height: 120px;">
+            </div>
+
+            <div class="col-lg-9">
+                <img src="{{ asset('files/kr.png') }}" class="img-fluid m-auto d-block p-2" style="max-height: 120px;">
+            </div>
+        </div>
+
+
+
 
         {{--
         http://library.gpntb.ru/cgi-bin/irbis64r_simplesite/cgiirbis_64.exe?C21COM=S&I21DBN=UDC&Z21ID=&S21FMT=UDC&S21ALL=%3C.%3EU=33%3C.%3E&P21DBN=IBIS&S21COLORTERMS=0
