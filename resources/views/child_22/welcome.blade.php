@@ -116,7 +116,7 @@
                     <div class="p-2 mr-1">1</div>
                     <div class="w-100 p-1 pl-2" style="height: 54px;">
                         <button type="button" class="btn btn-section" data-toggle="modal" data-target="#section1">
-                            СЕМЬЯ И РЕЛИГИЯ В ИСТОРИЧЕСКОМ, СОЦИОЛОГИЧЕСКОМ И ПСИХОЛОГИЧЕСКОМ АСПЕКТАХ
+                            СЕМЬЯ И РЕЛИГИЯ В ИСТОРИЧЕСКОМ, СОЦИОЛОГИЧЕСКОМ И ФИЛОСОФСКОМ АСПЕКТАХ
                         </button>
 
                     </div>
