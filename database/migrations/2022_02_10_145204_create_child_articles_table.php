@@ -20,9 +20,9 @@ class CreateChildArticlesTable extends Migration
             $table->text('node')->nullable(true);//Комментарий
 
             $table->bigInteger('section_id')->unsigned();
-            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade')->onUpdate('cascade');//Секция
+            $table->foreign('section_id')->references('id')->on('child_sections')->onDelete('cascade')->onUpdate('cascade');//Секция
             $table->bigInteger('form_id')->unsigned();
-            $table->foreign('form_id')->references('id')->on('forms')->onDelete('cascade')->onUpdate('cascade');//Форма
+            $table->foreign('form_id')->references('id')->on('child_forms')->onDelete('cascade')->onUpdate('cascade');//Форма
 
             $table->string('phone')->default('');//ББК
             $table->string('email')->default('');//ББК

@@ -42,28 +42,32 @@ class ChildArticleController extends Controller
      */
     public function store(ChildArticleRequest $request)
     {
+        if($request->file('files')){
+            $file = $request->file('files');
+            $folder = time();
+            $path = 'files/'.$folder;
+            $file_name = $file->getClientOriginalName();
 
-        $file = $request->file('files');
-        $folder = time();
-        $path = 'files/'.$folder;
-        $file_name = $file->getClientOriginalName();
+            $file->storeAs('public/'.$path, $file_name);
+        }
 
-        $file->storeAs('public/'.$path, $file_name);
 
         $article = new ChildArticle();
 
         $article->name = $request->article_name;
-        $article->files = 'storage/'.$path.'/'.$file_name;
+        $article->files = '/';
+        if($request->file('files')) {
+            $article->files = 'storage/' . $path . '/' . $file_name;
+        }
         $article->node = $request->node;
         $article->section()->associate(ChildSection::find($request->section));
         $article->form()->associate(ChildForm::find($request->form));
         $article->phone = $request->phone;
         $article->email = $request->email;
 
+
+
         $article->save();
-
-
-
 
         foreach ($request->surname as $key => $val)
         {

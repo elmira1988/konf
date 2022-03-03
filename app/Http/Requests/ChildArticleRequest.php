@@ -35,7 +35,7 @@ class ChildArticleRequest extends FormRequest
             'rank.*' => ['required'],
 
             'article_name' => 'required',
-            'files' => ['required','file','mimes:docx'],
+            'files' => ['required_unless:form,4','file','mimes:docx'],
             'section' => 'required',
             'form' => 'required',
             'email' => ['required','email'],

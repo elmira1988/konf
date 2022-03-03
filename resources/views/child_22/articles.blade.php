@@ -82,11 +82,15 @@
                 </td>
             </tr>
 
+            @if($article->form->id !==4)
             <tr>
                 <td colspan="2">
+
                     <p> Материалы доклада <a href="{{ asset($article->files) }}">скачать</a></p>
+
                 </td>
             </tr>
+            @endif
 
             @if($article->node!='')
                 <tr>

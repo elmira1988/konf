@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ChildFormsSeeder extends Seeder
 {
@@ -14,5 +15,6 @@ class ChildFormsSeeder extends Seeder
         DB::table('child_forms')->insert(['name' => 'Доклад']);
         DB::table('child_forms')->insert(['name' => 'Презентация']);
         DB::table('child_forms')->insert(['name' => 'Размещение тезиса доклада в сборнике материалов']);
+        DB::table('child_forms')->insert(['name' => 'Слушатель']);
     }
 }
