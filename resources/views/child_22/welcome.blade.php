@@ -101,7 +101,7 @@
                     <button type="button" class="btn btn-link" data-toggle="modal" data-target="#form_uchastiya">ФОРМЫ УЧАСТИЯ</button>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center p-0">
-                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#pravila">ПРАВИЛА ОФОРМЛЕНИЯ ТЕЗИСОВ</button>
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#pravila">ПРАВИЛА ОФОРМЛЕНИЯ СТАТЬИ</button>
                 </div>
             </div>
 
