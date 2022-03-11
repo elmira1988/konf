@@ -18,14 +18,16 @@ class CreateChildAuthorsTable extends Migration
             $table->string('surname');
             $table->string('name');
             $table->string('patronymic')->nullable(true);
-            $table->string('work');
+            $table->string('work')->nullable(true);
             $table->string('adress');
-            $table->string('status');
+            $table->string('status')->nullable(true);
 
-            $table->bigInteger('degree_id')->unsigned();
+            $table->bigInteger('degree_id')->nullable(true);
+            $table->bigInteger('rank_id')->nullable(true);
+            /*$table->bigInteger('degree_id')->unsigned();
             $table->foreign('degree_id')->references('id')->on('degree')->onDelete('cascade')->onUpdate('cascade');
             $table->bigInteger('rank_id')->unsigned();
-            $table->foreign('rank_id')->references('id')->on('ranks')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('rank_id')->references('id')->on('ranks')->onDelete('cascade')->onUpdate('cascade');*/
 
             $table->bigInteger('article_id')->unsigned();
             $table->foreign('article_id')->references('id')->on('child_articles')->onDelete('cascade')->onUpdate('cascade');

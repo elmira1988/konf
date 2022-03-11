@@ -31,16 +31,10 @@ files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(
 
 const app = new Vue({
     el: '#app',
-    mounted: function() {
-        console.log('123');
-
-    },
     data: function(){
         return{
             errors: {}
         }
-    },
-    mounted:function (){
     },
     methods:{
         send_form:function (e) {
@@ -81,7 +75,7 @@ const app = new Vue({
                             hide: true,
                             animation: 'fade',
                             animateSpeed: '250ms',
-                            delay: 400000,
+                            delay: 2000,
                             remove: true,
                             width:700,
                             styling: 'bootstrap4',
@@ -102,7 +96,7 @@ const app = new Vue({
                             hide: true,
                             animation: 'fade',
                             animateSpeed: '250ms',
-                            delay: 4000,
+                            delay: 2000,
                             remove: true,
                             width:700,
                             styling: 'bootstrap4',

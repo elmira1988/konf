@@ -183,7 +183,7 @@
                     'work_en':'',
                     'adress_en':'',
                     'status_en':''});
-            }
+            },
         }
     }
 </script>

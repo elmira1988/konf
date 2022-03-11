@@ -17,16 +17,25 @@
     <h1>Все заявки</h1>
     @foreach(\App\ChildArticle::get() as $k=>$article)
         <h4 class="mt-5">Заявка №{{($k+1)}} от {{$article->created_at->format('d.m.Y h:i')}}</h4>
+
         <table class="table table-bordered">
             <tbody>
             <tr>
-                <td>Авторы</td>
+                <td>
+                    @if($article->form->id !==4)
+                    Авторы
+                        @else
+                        Слушатель
+                    @endif
+                </td>
                 <td>
                     @foreach($article->authors as $author)
                         <p> {{$author->surname.' '.$author->name.' '.$author->patronymic}} </p>
                     @endforeach
                 </td>
             </tr>
+
+            @if($article->form->id !==4)
             <tr>
                 <td>Название статьи</td>
                 <td>
@@ -42,6 +51,7 @@
                     @endforeach
                 </td>
             </tr>
+            @endif
 
             <tr>
                 <td>Адрес</td>
@@ -52,6 +62,7 @@
                 </td>
             </tr>
 
+            @if($article->form->id!==4)
             <tr>
                 <td>Ученая степень, ученое звание,<br> должность/авторов</td>
                 <td>
@@ -60,7 +71,7 @@
                     @endforeach
                 </td>
             </tr>
-
+            @endif
             <tr>
                 <td>Контакты</td>
                 <td>
@@ -101,7 +112,8 @@
             @endif
             </tbody>
         </table>
-    @endforeach
+
+@endforeach
 </div>
 
 

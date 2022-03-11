@@ -76,12 +76,21 @@ class ChildArticleController extends Controller
             $author->surname = $val;
             $author->name = $request->name[$key];
             $author->patronymic = $request->patronymic[$key];
-            $author->work = $request->work[$key];
             $author->adress = $request->adress[$key];
-            $author->status = $request->status[$key];
 
-            $author->degree()->associate(Degree::find($request->degree[$key]));
-            $author->rank()->associate(Rank::find($request->rank[$key]));
+            if($request->form!==4)
+            {
+                $author->work = $request->work[$key];
+                $author->status = $request->status[$key];
+
+                $author->degree()->associate(Degree::find($request->degree[$key]));
+                $author->rank()->associate(Rank::find($request->rank[$key]));
+            }
+            else{
+                $author->degree=0;
+                $author->rank=0;
+            }
+
             $author->article()->associate($article);
             $author->save();
 

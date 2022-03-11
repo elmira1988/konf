@@ -34,10 +34,10 @@ class ChildArticleRequest extends FormRequest
             'degree.*' => ['required'],
             'rank.*' => ['required'],
 
-            'article_name' => 'required',
+            'article_name' => 'required_if:form,1,2,3',
             'files' => ['required_unless:form,4','file','mimes:docx'],
-            'section' => 'required',
-            'form' => 'required',
+            'section' => ['required_if:form,1,2,3', 'numeric'],
+            'form' => ['required','numeric'],
             'email' => ['required','email'],
             'phone' => ['required','regex:/\(\d{3}\)\d{3}-\d{4}/'],
         ];
