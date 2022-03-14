@@ -15,203 +15,359 @@
 <body>
 <div class="container mt-5 mb-5 artciles-all">
     <h1>Все заявки. Докладчики.</h1>
-    <h2>{{ \App\ChildSection::where('id',"=","1")->get()->first()->name }}</h2>
 
-    @foreach(\App\ChildArticle::where([
-                                    ['section_id', '=', '1'],
-                                    ['form_id', '<>', '4'],
-                                ])->get() as $k=>$article)
+    <h2>{{ \App\ChildSection::where('id',"=","1")->get()->first()->name }} / всего: {{ \App\ChildArticle::where([
+                                            ['section_id', '=', '1'],
+                                            ['form_id', '<>', '4'],
+                                        ])->get()->count() }}</h2>
 
-        <table class="table table-bordered">
-            <tbody>
+    <table class="table table-bordered">
+        <tbody>
+            @foreach(\App\ChildArticle::where([
+                                            ['section_id', '=', '1'],
+                                            ['form_id', '<>', '4'],
+                                        ])->get() as $k=>$article)
+                    <tr>
+                        <td style="width: 45px;">
+                            {{ $article->id }}
+                        </td>
+
+                        <td>
+                            @foreach($article->authors as $author)
+                                <p> {{$author->surname.' '.$author->name.' '.$author->patronymic}} </p>
+                            @endforeach
+                        </td>
+
+                        <td>
+                            @foreach($article->authors as $author)
+                                <p> {{$author->adress}} </p>
+                            @endforeach
+                        </td>
+
+                        <td>
+                            {{ $article->email}}
+                        </td>
+
+                        <td>
+                            {{ $article->phone }}
+                        </td>
+
+                        <td>
+                            <p> Материалы доклада <a href="{{ asset($article->files) }}">скачать</a></p>
+                        </td>
+                    </tr>
+
+            @endforeach
+        </tbody>
+    </table>
+
+    <h2 class="mt-5">{{ \App\ChildSection::where('id',"=","2")->get()->first()->name }} / всего: {{ \App\ChildArticle::where([
+                                            ['section_id', '=', '2'],
+                                            ['form_id', '<>', '4'],
+                                        ])->get()->count() }}</h2>
+
+    <table class="table table-bordered">
+        <tbody>
+
+        @foreach(\App\ChildArticle::where([
+                                        ['section_id', '=', '2'],
+                                        ['form_id', '<>', '4'],
+                                    ])->get() as $k=>$article)
             <tr>
-                <td>
+                <td style="width: 45px;">
                     {{ $article->id }}
                 </td>
+
+                <td>
+                    @foreach($article->authors as $author)
+                        <p> {{$author->surname.' '.$author->name.' '.$author->patronymic}} </p>
+                    @endforeach
+                </td>
+
                 <td>
                     @foreach($article->authors as $author)
                         <p> {{$author->adress}} </p>
                     @endforeach
                 </td>
-            </tr>
-            </tbody>
-        </table>
 
-    @endforeach
-
-    <h2 class="mt-5">{{ \App\ChildSection::where('id',"=","2")->get()->first()->name }}</h2>
-
-    @foreach(\App\ChildArticle::where([
-                                    ['section_id', '=', '2'],
-                                    ['form_id', '<>', '4'],
-                                ])->get() as $k=>$article)
-
-        <table class="table table-bordered">
-            <tbody>
-            <tr>
                 <td>
+                    {{ $article->email}}
+                </td>
+
+                <td>
+                    {{ $article->phone }}
+                </td>
+
+                <td>
+                    <p> Материалы доклада <a href="{{ asset($article->files) }}">скачать</a></p>
+                </td>
+            </tr>
+
+        @endforeach
+
+        </tbody>
+    </table>
+
+    <h2 class="mt-5">{{ \App\ChildSection::where('id',"=","3")->get()->first()->name }} / всего: {{ \App\ChildArticle::where([
+                                            ['section_id', '=', '3'],
+                                            ['form_id', '<>', '4'],
+                                        ])->get()->count() }}</h2>
+
+    <table class="table table-bordered">
+        <tbody>
+        @foreach(\App\ChildArticle::where([
+                                        ['section_id', '=', '3'],
+                                        ['form_id', '<>', '4'],
+                                    ])->get() as $k=>$article)
+            <tr>
+                <td style="width: 45px;">
                     {{ $article->id }}
                 </td>
+
+                <td>
+                    @foreach($article->authors as $author)
+                        <p> {{$author->surname.' '.$author->name.' '.$author->patronymic}} </p>
+                    @endforeach
+                </td>
+
                 <td>
                     @foreach($article->authors as $author)
                         <p> {{$author->adress}} </p>
                     @endforeach
                 </td>
-            </tr>
-            </tbody>
-        </table>
 
-    @endforeach
-
-    <h2 class="mt-5">{{ \App\ChildSection::where('id',"=","3")->get()->first()->name }}</h2>
-
-    @foreach(\App\ChildArticle::where([
-                                    ['section_id', '=', '3'],
-                                    ['form_id', '<>', '4'],
-                                ])->get() as $k=>$article)
-
-        <table class="table table-bordered">
-            <tbody>
-            <tr>
                 <td>
-                    {{ $article->id }}
+                    {{ $article->email}}
                 </td>
+
                 <td>
-                    @foreach($article->authors as $author)
-                        <p> {{$author->adress}} </p>
-                    @endforeach
+                    {{ $article->phone }}
+                </td>
+
+                <td>
+                    <p> Материалы доклада <a href="{{ asset($article->files) }}">скачать</a></p>
                 </td>
             </tr>
-            </tbody>
-        </table>
 
-    @endforeach
+        @endforeach
+        </tbody>
+    </table>
 
-    <h2 class="mt-5">{{ \App\ChildSection::where('id',"=","4")->get()->first()->name }}</h2>
+    <h2 class="mt-5">{{ \App\ChildSection::where('id',"=","4")->get()->first()->name }} / всего: {{ \App\ChildArticle::where([
+                                            ['section_id', '=', '4'],
+                                            ['form_id', '<>', '4'],
+                                        ])->get()->count() }}</h2>
 
+    <table class="table table-bordered">
+        <tbody>
     @foreach(\App\ChildArticle::where([
                                    ['section_id', '=', '4'],
                                    ['form_id', '<>', '4'],
                                ])->get() as $k=>$article)
+        <tr>
+            <td style="width: 45px;">
+                {{ $article->id }}
+            </td>
 
-        <table class="table table-bordered">
-            <tbody>
-            <tr>
-                <td>
-                    {{ $article->id }}
-                </td>
-                <td>
-                    @foreach($article->authors as $author)
-                        <p> {{$author->adress}} </p>
-                    @endforeach
-                </td>
-            </tr>
-            </tbody>
-        </table>
+            <td>
+                @foreach($article->authors as $author)
+                    <p> {{$author->surname.' '.$author->name.' '.$author->patronymic}} </p>
+                @endforeach
+            </td>
+
+            <td>
+                @foreach($article->authors as $author)
+                    <p> {{$author->adress}} </p>
+                @endforeach
+            </td>
+
+            <td>
+                {{ $article->email}}
+            </td>
+
+            <td>
+                {{ $article->phone }}
+            </td>
+
+            <td>
+                <p> Материалы доклада <a href="{{ asset($article->files) }}">скачать</a></p>
+            </td>
+        </tr>
 
     @endforeach
+        </tbody>
+    </table>
 
 
 
 
     <h1 class="mt-5">Все заявки. Слушатели.</h1>
-    <h2>{{ \App\ChildSection::where('id',"=","1")->get()->first()->name }}</h2>
+    <h2>{{ \App\ChildSection::where('id',"=","1")->get()->first()->name }} / всего: {{ \App\ChildArticle::where([
+                                            ['section_id', '=', '1'],
+                                            ['form_id', '=', '4'],
+                                        ])->get()->count() }}</h2>
 
-    @foreach(\App\ChildArticle::where([
-                                    ['section_id', '=', '1'],
-                                    ['form_id', '=', '4'],
-                                ])->get() as $k=>$article)
+    <table class="table table-bordered">
+        <tbody>
+            @foreach(\App\ChildArticle::where([
+                                            ['section_id', '=', '1'],
+                                            ['form_id', '=', '4'],
+                                        ])->get() as $k=>$article)
+                <tr>
+                    <td style="width: 45px;">
+                        {{ $article->id }}
+                    </td>
 
-        <table class="table table-bordered">
-            <tbody>
+                    <td>
+                        @foreach($article->authors as $author)
+                            <p> {{$author->surname.' '.$author->name.' '.$author->patronymic}} </p>
+                        @endforeach
+                    </td>
+
+                    <td>
+                        @foreach($article->authors as $author)
+                            <p> {{$author->adress}} </p>
+                        @endforeach
+                    </td>
+
+                    <td>
+                        {{ $article->email}}
+                    </td>
+
+                    <td>
+                        {{ $article->phone }}
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+
+
+    <h2 class="mt-5">{{ \App\ChildSection::where('id',"=","2")->get()->first()->name }} / всего: {{ \App\ChildArticle::where([
+                                            ['section_id', '=', '2'],
+                                            ['form_id', '=', '4'],
+                                        ])->get()->count() }}</h2>
+
+    <table class="table table-bordered">
+        <tbody>
+        @foreach(\App\ChildArticle::where([
+                                        ['section_id', '=', '2'],
+                                        ['form_id', '=', '4'],
+                                    ])->get() as $k=>$article)
             <tr>
-                <td>
+                <td style="width: 45px;">
                     {{ $article->id }}
                 </td>
+
+                <td>
+                    @foreach($article->authors as $author)
+                        <p> {{$author->surname.' '.$author->name.' '.$author->patronymic}} </p>
+                    @endforeach
+                </td>
+
                 <td>
                     @foreach($article->authors as $author)
                         <p> {{$author->adress}} </p>
                     @endforeach
                 </td>
-            </tr>
-            </tbody>
-        </table>
 
-    @endforeach
-
-
-    <h2 class="mt-5">{{ \App\ChildSection::where('id',"=","2")->get()->first()->name }}</h2>
-
-    @foreach(\App\ChildArticle::where([
-                                    ['section_id', '=', '2'],
-                                    ['form_id', '=', '4'],
-                                ])->get() as $k=>$article)
-
-        <table class="table table-bordered">
-            <tbody>
-            <tr>
                 <td>
-                    {{ $article->id }}
+                    {{ $article->email}}
                 </td>
+
                 <td>
-                    @foreach($article->authors as $author)
-                        <p> {{$author->adress}} </p>
-                    @endforeach
+                    {{ $article->phone }}
                 </td>
             </tr>
-            </tbody>
-        </table>
 
-    @endforeach
+        @endforeach
+
+        </tbody>
+    </table>
 
 
-    <h2 class="mt-5">{{ \App\ChildSection::where('id',"=","3")->get()->first()->name }}</h2>
+    <h2 class="mt-5">{{ \App\ChildSection::where('id',"=","3")->get()->first()->name }} / всего: {{ \App\ChildArticle::where([
+                                            ['section_id', '=', '3'],
+                                            ['form_id', '=', '4'],
+                                        ])->get()->count() }}</h2>
 
+    <table class="table table-bordered">
+        <tbody>
     @foreach(\App\ChildArticle::where([
                                     ['section_id', '=', '3'],
                                     ['form_id', '=', '4'],
                                 ])->get() as $k=>$article)
+        <tr>
+            <td style="width: 45px;">
+                {{ $article->id }}
+            </td>
 
-        <table class="table table-bordered">
-            <tbody>
-            <tr>
-                <td>
-                    {{ $article->id }}
-                </td>
-                <td>
-                    @foreach($article->authors as $author)
-                        <p> {{$author->adress}} </p>
-                    @endforeach
-                </td>
-            </tr>
-            </tbody>
-        </table>
+            <td>
+                @foreach($article->authors as $author)
+                    <p> {{$author->surname.' '.$author->name.' '.$author->patronymic}} </p>
+                @endforeach
+            </td>
+
+            <td>
+                @foreach($article->authors as $author)
+                    <p> {{$author->adress}} </p>
+                @endforeach
+            </td>
+
+            <td>
+                {{ $article->email}}
+            </td>
+
+            <td>
+                {{ $article->phone }}
+            </td>
+        </tr>
+
 
     @endforeach
+        </tbody>
+    </table>
 
-    <h2 class="mt-5">{{ \App\ChildSection::where('id',"=","4")->get()->first()->name }}</h2>
+    <h2 class="mt-5">{{ \App\ChildSection::where('id',"=","4")->get()->first()->name }} / всего: {{ \App\ChildArticle::where([
+                                            ['section_id', '=', '3'],
+                                            ['form_id', '=', '4'],
+                                        ])->get()->count() }}</h2>
 
+    <table class="table table-bordered">
+        <tbody>
     @foreach(\App\ChildArticle::where([
                                     ['section_id', '=', '3'],
                                     ['form_id', '=', '4'],
                                 ])->get() as $k=>$article)
+        <tr>
+            <td style="width: 45px;">
+                {{ $article->id }}
+            </td>
 
-        <table class="table table-bordered">
-            <tbody>
-            <tr>
-                <td>
-                    {{ $article->id }}
-                </td>
-                <td>
-                    @foreach($article->authors as $author)
-                        <p> {{$author->adress}} </p>
-                    @endforeach
-                </td>
-            </tr>
-            </tbody>
-        </table>
+            <td>
+                @foreach($article->authors as $author)
+                    <p> {{$author->surname.' '.$author->name.' '.$author->patronymic}} </p>
+                @endforeach
+            </td>
+
+            <td>
+                @foreach($article->authors as $author)
+                    <p> {{$author->adress}} </p>
+                @endforeach
+            </td>
+
+            <td>
+                {{ $article->email}}
+            </td>
+
+            <td>
+                {{ $article->phone }}
+            </td>
+        </tr>
 
     @endforeach
+        </tbody>
+    </table>
 </div>
 
 
