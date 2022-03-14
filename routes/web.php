@@ -33,4 +33,9 @@ Route::get('/child-22', function () {
 Route::get('/child-22/articles', function () {
     return view('child_22.articles');
 });
+
+Route::get('/child-22/result', function () {
+    return view('child_22.result');
+});
+
 Route::resource("child_articles","ChildArticleController");
