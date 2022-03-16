@@ -42313,7 +42313,7 @@ var render = function() {
       ? _c(
           "div",
           [
-            _c("h5", { staticClass: "text-center" }, [_vm._v("Авторы")]),
+            _c("h2", { staticClass: "text-center" }, [_vm._v("Авторы")]),
             _vm._v(" "),
             _c("child-authors-component", {
               attrs: {
@@ -42323,7 +42323,7 @@ var render = function() {
               }
             }),
             _vm._v(" "),
-            _c("h5", { staticClass: "text-center mt-4" }, [_vm._v("Статья")]),
+            _c("h2", { staticClass: "text-center mt-4" }, [_vm._v("Статья")]),
             _vm._v(" "),
             _c("div", { staticClass: "row" }, [
               _c("div", { staticClass: "col-lg-12 form-group" }, [
@@ -42441,7 +42441,7 @@ var render = function() {
         ]
       },
       [
-        _c("h5", { staticClass: "text-center mt-4" }, [
+        _c("h2", { staticClass: "text-center mt-4" }, [
           _vm._v("Контактные данные")
         ]),
         _vm._v(" "),

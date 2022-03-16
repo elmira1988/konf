@@ -52,12 +52,12 @@
         </div>
 
         <div v-if="form!==4 && form!==''">
-            <h5 class="text-center">Авторы</h5>
+            <h2 class="text-center">Авторы</h2>
             <child-authors-component :degree="degree"
                                      :ranks="ranks"
                                      :errors="errors"></child-authors-component>
 
-            <h5 class="text-center mt-4">Статья</h5>
+            <h2 class="text-center mt-4">Статья</h2>
 
             <div class="row">
                 <div class="col-lg-12 form-group">
@@ -108,7 +108,7 @@
 
 
         <div v-show="form!==''">
-            <h5 class="text-center mt-4">Контактные данные</h5>
+            <h2 class="text-center mt-4">Контактные данные</h2>
 
             <div class="row">
                 <div class="col-lg-6">
