@@ -10,10 +10,15 @@ use App\Degree;
 use App\Http\Requests\ChildArticleRequest;
 use App\Rank;
 use Illuminate\Http\Request;
+use App\Events\SendMail;
 use Illuminate\Support\Facades\Mail;
 
 class ChildArticleController extends Controller
 {
+    protected $storagePath = 'storage/';
+    protected $publicPath = 'public/';
+    protected $filesPath = 'files/';
+
     /**
      * Display a listing of the resource.
      *
@@ -35,74 +40,29 @@ class ChildArticleController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param ChildArticleRequest $request
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(ChildArticleRequest $request)
     {
-        if($request->file('files')){
-            $file = $request->file('files');
-            $folder = time();
-            $path = 'files/'.$folder;
-            $file_name = $file->getClientOriginalName();
-
-            $file->storeAs('public/'.$path, $file_name);
-        }
-
-
         $article = new ChildArticle();
-
-        $article->name = $request->article_name;
-        $article->files = '/';
-        if($request->file('files')) {
-            $article->files = 'storage/' . $path . '/' . $file_name;
+        if($request->file('files')){
+            $article->files = $this->uploadFile($request->file('files'));
+        }else {
+            $article->files = '/';
         }
+        $article->name = $request->article_name;
         $article->node = $request->node;
         $article->section()->associate(ChildSection::find($request->section));
         $article->form()->associate(ChildForm::find($request->form));
         $article->phone = $request->phone;
         $article->email = $request->email;
-
-
-
         $article->save();
 
-        foreach ($request->surname as $key => $val)
-        {
-            $author = new ChildAuthors();
+        $this->storeAuthors($request, $article);
 
-            $author->surname = $val;
-            $author->name = $request->name[$key];
-            $author->patronymic = $request->patronymic[$key];
-            $author->adress = $request->adress[$key];
+        event(new SendMail(['email' => $request->email]));
 
-            if($request->form!==4)
-            {
-                $author->work = $request->work[$key];
-                $author->status = $request->status[$key];
-
-                $author->degree()->associate(Degree::find($request->degree[$key]));
-                $author->rank()->associate(Rank::find($request->rank[$key]));
-            }
-            else{
-                $author->degree=0;
-                $author->rank=0;
-            }
-
-            $author->article()->associate($article);
-            $author->save();
-
-        }
-/*
-        $data = array('email' => $request->email);
-
-        Mail::send('send_email', array(), function($message) use($data)
-        {
-            $message->to($data['email'])->subject('Международная конференция. Заявка успешно принята!');
-        });
-*/
         return response()->json($request->all());
     }
 
@@ -149,5 +109,54 @@ class ChildArticleController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Добавляем авторов статьи
+     *
+     * @param $request
+     * @param $article
+     */
+    public function storeAuthors($request, $article)
+    {
+        foreach ($request->surname as $key => $val)
+        {
+            $author = new ChildAuthors();
+
+            $author->surname = $val;
+            $author->name = $request->name[$key];
+            $author->patronymic = $request->patronymic[$key];
+            $author->adress = $request->adress[$key];
+
+            if($request->form !== 4)
+            {
+                $author->work = $request->work[$key];
+                $author->status = $request->status[$key];
+
+                $author->degree()->associate(Degree::find($request->degree[$key]));
+                $author->rank()->associate(Rank::find($request->rank[$key]));
+            }
+            else{
+                $author->degree=0;
+                $author->rank=0;
+            }
+            $author->article()->associate($article);
+            $author->save();
+        }
+    }
+
+    /**
+     * @param $file
+     * @return string
+     */
+    public function uploadFile($file)
+    {
+        $folder = time();
+        $path = $this->filesPath . $folder;
+        $file_name = $file->getClientOriginalName();
+
+        $file->storeAs($this->publicPath . $path, $file_name);
+
+        return $this->storagePath . $path . '/' . $file_name;
     }
 }
