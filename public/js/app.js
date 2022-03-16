@@ -41848,7 +41848,7 @@ var render = function() {
           "button",
           {
             staticClass:
-              "btn btn-outline-secondary mt-2 pt-0 pb-0 pl-2 pr-2 pull-right",
+              "btn btn-outline-secondary col-lg-12 mt-2 mb-4 pt-10 pb-10 pl-2 pr-2 pull-right",
             attrs: { type: "button" },
             on: { click: _vm.add_list }
           },
@@ -42171,7 +42171,7 @@ var render = function() {
           "button",
           {
             staticClass:
-              "btn btn-outline-secondary mt-2 pt-0 pb-0 pl-2 pr-2 pull-right",
+              "btn btn-outline-secondary col-lg-12 mt-2 mb-4 pt-10 pb-10 pl-2 pr-2 pull-right",
             attrs: { type: "button" },
             on: { click: _vm.add_list }
           },
@@ -42668,7 +42668,7 @@ var render = function() {
           "button",
           {
             staticClass:
-              "btn btn-outline-secondary mt-2 pt-0 pb-0 pl-2 pr-2 pull-right",
+              "btn btn-outline-secondary col-lg-12 mt-2 mb-4 pt-10 pl-2 pr-2 pull-right",
             attrs: { type: "button" },
             on: { click: _vm.add_list }
           },
@@ -55418,9 +55418,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
+/***/ "./resources/sass/app.sass":
 /*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
+  !*** ./resources/sass/app.sass ***!
   \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -55431,13 +55431,13 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ 0:
 /*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
+  !*** multi ./resources/js/app.js ./resources/sass/app.sass ***!
   \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! F:\WebServer\OSPanel\domains\konf\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! F:\WebServer\OSPanel\domains\konf\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\OSPanel\domains\conference\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\OSPanel\domains\conference\resources\sass\app.sass */"./resources/sass/app.sass");
 
 
 /***/ })

@@ -21,7 +21,7 @@
         </div>
 
         <div class="panel-footer">
-            <button type="button" class="btn btn-outline-secondary mt-2 pt-0 pb-0 pl-2 pr-2 pull-right"  @click="add_list">
+            <button type="button" class="btn btn-outline-secondary col-lg-12 mt-2 mb-4 pt-10 pl-2 pr-2 pull-right"  @click="add_list">
                 <span class="fa fa-plus mr-2"></span>{{ button }}
             </button>
         </div>
