@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bcc35c5-e563-440f-b868-dc6f7b46d9e5" name="Default Changelist" comment="fix html style">
-      <change afterPath="$PROJECT_DIR$/public/files/data/metadata.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files/sample_article.doc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/files/Obrazec_statyi.doc" beforeDir="false" afterPath="$PROJECT_DIR$/public/files/Obrazec_statyi_old.doc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/child_22/orgkomitet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/child_22/orgkomitet.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/child_22/pravila.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/child_22/pravila.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/child_22/program_comitet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/child_22/program_comitet.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +154,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/files" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -244,6 +239,7 @@
       <workItem from="1647424769719" duration="1872000" />
       <workItem from="1647589201432" duration="636000" />
       <workItem from="1647944226893" duration="4348000" />
+      <workItem from="1647950392396" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="fix html style">
       <created>1647413239621</created>
