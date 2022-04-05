@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7bcc35c5-e563-440f-b868-dc6f7b46d9e5" name="Default Changelist" comment="fix html style">
+    <list default="true" id="7bcc35c5-e563-440f-b868-dc6f7b46d9e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/child_22/pravila.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/child_22/pravila.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/child_22/result.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/child_22/result.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/child_22/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/child_22/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +30,30 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="konf@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="konf@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="konf@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="konf: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="konf@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="konf: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="child_articles: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -150,15 +175,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/child_22" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OSPanel\domains\conference\resources\views\child_22" />
       <recent name="D:\OSPanel\domains\conference\public\files" />
       <recent name="D:\OSPanel\domains\conference\public\files\data" />
       <recent name="D:\OSPanel\domains\conference\resources\sass" />
@@ -185,6 +212,21 @@
       <PhpTestRunnerSettings scope="ConfigurationFile" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@978df25" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -239,7 +281,9 @@
       <workItem from="1647424769719" duration="1872000" />
       <workItem from="1647589201432" duration="636000" />
       <workItem from="1647944226893" duration="4348000" />
-      <workItem from="1647950392396" duration="19000" />
+      <workItem from="1647950392396" duration="85000" />
+      <workItem from="1649156252057" duration="19000" />
+      <workItem from="1649156916482" duration="1713000" />
     </task>
     <task id="LOCAL-00001" summary="fix html style">
       <created>1647413239621</created>
@@ -248,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647413239621</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix error in text">
+      <created>1647950465451</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647950465451</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +320,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix html style" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix html style" />
+    <MESSAGE value="fix error in text" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix error in text" />
   </component>
   <component name="WindowStateProjectService">
     <state x="692" y="322" key="#com.intellij.fileTypes.FileTypeChooser" />
