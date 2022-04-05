@@ -38,4 +38,8 @@ Route::get('/child-22/result', function () {
     return view('child_22.result');
 });
 
+Route::get('/child-22/emails', function () {
+    return view('child_22.emails');
+});
+
 Route::resource("child_articles","ChildArticleController");

@@ -107,7 +107,6 @@
     @endfor
 </div>
 
-
 <script src="{{ mix('/js/app.js') }}"></script>
 <script src="{{ asset('/js/script.js') }}"></script>
 
