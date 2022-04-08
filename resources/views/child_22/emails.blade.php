@@ -22,12 +22,30 @@
                                                 ['form_id', '=', '4'],
                                             ])->get()->count() }}</h2>
 
+            <!--
                 @foreach(\App\ChildArticle::where([
                             ['section_id', '=', $i],
                             ['form_id', '=', '4']
                         ])->get() as $k=>$article)
                     {{ $article->email }},
                 @endforeach
+            -->
+
+            <form action="push" method="post" class="mt-5">
+                @csrf
+                <div class="form-group">
+                    <textarea name="text" id="text" cols="30" rows="5" class="form-control"></textarea>
+                </div>
+
+
+                <div class="form-group">
+                    <textarea name="emails" id="emails" cols="30" rows="10" class="form-control">@foreach(\App\ChildArticle::where([['section_id', '=', $i], ['form_id', '=', '4']])->get() as $k=>$article){{ $article->email }}, @endforeach</textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Отправить</button>
+                </div>
+            </form>
         </div>
     @endfor
 </div>
