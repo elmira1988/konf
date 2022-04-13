@@ -42,4 +42,6 @@ Route::get('/child-22/emails', function () {
     return view('child_22.emails');
 });
 
+Route::post('/child-22/push', [\App\Http\Controllers\ChildArticleController::class, 'push']);
+
 Route::resource("child_articles","ChildArticleController");

@@ -8,6 +8,7 @@ use App\ChildForm;
 use App\ChildSection;
 use App\Degree;
 use App\Http\Requests\ChildArticleRequest;
+use App\Jobs\SendEmailToConferenceJob;
 use App\Rank;
 use Illuminate\Http\Request;
 use App\Events\SendMail;
@@ -158,5 +159,25 @@ class ChildArticleController extends Controller
         $file->storeAs($this->publicPath . $path, $file_name);
 
         return $this->storagePath . $path . '/' . $file_name;
+    }
+
+    /**
+     * @param Request $request
+     */
+    public function push(Request $request)
+    {
+        //event(new SendMail(['emails' => $request->emails]));
+        //$details['email'] = 'your_email@gmail.com';
+        //$details['email'] = $request->emails;
+
+        $users_temp = explode(', ', $request->emails);
+        $users = [];
+        foreach($users_temp as $key => $ut){
+            $users[$key] = $ut;
+        }
+
+        foreach ($users as $email) {
+            dispatch(new SendEmailToConferenceJob($email));
+        }
     }
 }
