@@ -28,6 +28,6 @@ class SendEmailToConference extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.success');
+        return $this->view('emails.success')->subject("Приглашение на конференцию");
     }
 }

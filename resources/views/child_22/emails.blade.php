@@ -14,7 +14,37 @@
 </head>
 <body>
 <div class="container mt-5 mb-5 artciles-all">
-    <h1 class="mt-5">Все заявки. Emails</h1>
+    <h1 class="mt-5">Все заявки. Докладчики. Emails</h1>
+    @for($i=1;$i<=4;$i++)
+        <div style="margin-top: 55px;">
+            <h2 class="mt-5">{{ \App\ChildSection::where('id',"=",$i)->get()->first()->name }} / всего: {{ \App\ChildArticle::where([
+                                            ['section_id', '=', $i],
+                                            ['form_id', '<>', '4'],
+                                        ])->get()->count() }}</h2>
+
+            <form action="push" method="post" class="mt-5">
+                @csrf
+                <div class="form-group">
+                    <textarea name="text" id="text" cols="30" rows="5" class="form-control"></textarea>
+                </div>
+
+
+                <div class="form-group">
+                    <textarea name="emails" id="emails" cols="30" rows="10" class="form-control">@foreach(\App\ChildArticle::where([['section_id', '=', $i], ['form_id', '<>', '4']])->get() as $k=>$article){{ $article->email }}, @endforeach</textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Отправить</button>
+                </div>
+            </form>
+        </div>
+    @endfor
+    <br>
+
+    <hr>
+
+
+    <h1 class="mt-5">Все заявки. Слушатели. Emails</h1>
     @for($i=1;$i<=4;$i++)
         <div style="margin-top: 55px;">
             <h2>{{ \App\ChildSection::where('id',"=",$i)->get()->first()->name }} / всего: {{ \App\ChildArticle::where([

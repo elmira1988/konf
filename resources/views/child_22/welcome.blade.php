@@ -72,7 +72,8 @@
             </h4>
             <h3 class="text-center font-weight-bold mb-0">«Здоровое, ответственное родительство - залог счастливого детства»</h3>
             <h6 class="text-center">15 апреля 2022 года<br>
-                <a class="" href="{{ asset('files/Informacionnoye_pismo_child_22.pdf') }}">информационное письмо</a> &nbsp;&nbsp;&nbsp;
+                <a class="" href="{{ asset('files/Informacionnoye_pismo_child_22.pdf') }}">информационное письмо</a> &nbsp;&nbsp;&nbsp;|
+                <a class="" href="{{ asset('files/program.pdf') }}">программа конференции</a> &nbsp;&nbsp;&nbsp;
             {{--<a href="{{ asset('files/Spisok_na_09_08_2021.pdf') }}" class="text-center d-block">Список зарегистрированных участников</a> --}}
             {{--<a href="{{ asset('files/Programma_konferencii.pdf') }}" class="text-center d-block">Программа конференции</a>--}}
             <a href="https://us02web.zoom.us/j/81882456773" class="btn btn-info d-block mt-3 text-white">Ссылка на вход в Zoom</a><br>
@@ -130,7 +131,6 @@
                         </button>
                     </div>
                 </div>
-
             </div>
 
             <div class="col-lg-6">
@@ -151,8 +151,6 @@
                         </button>
                     </div>
                 </div>
-
-
             </div>
         </div>
 
