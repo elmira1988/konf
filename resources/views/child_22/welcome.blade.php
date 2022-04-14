@@ -76,8 +76,27 @@
                 <a class="" href="{{ asset('files/program.pdf') }}">программа конференции</a> &nbsp;&nbsp;&nbsp;
             {{--<a href="{{ asset('files/Spisok_na_09_08_2021.pdf') }}" class="text-center d-block">Список зарегистрированных участников</a> --}}
             {{--<a href="{{ asset('files/Programma_konferencii.pdf') }}" class="text-center d-block">Программа конференции</a>--}}
-            <a href="https://us02web.zoom.us/j/81882456773" class="btn btn-info d-block mt-3 text-white">Ссылка на вход в Zoom</a><br>
+            <!--<a href="https://us02web.zoom.us/j/81882456773" class="btn btn-info d-block mt-3 text-white">Ссылка на вход в Zoom</a><br>-->
+
+            <a href="https://youtu.be/Nt06mutVe5g" class="btn btn-info d-block mt-3 text-white" target="_blank">
+                Трансляция пленарного заседания <i>(начало в 12:00 по Екб)</i>
+            </a><br>
+            <a href="https://youtu.be/ZhWFoP6STwk" class="btn btn-info d-block mt-3 text-white" target="_blank">
+                Трансляция секции #1 <i>(начало в 15:00 по Екб)</i>
+            </a><br>
+            <a href="https://youtu.be/oNTcAVN3Egg" class="btn btn-info d-block mt-3 text-white" target="_blank">
+                Трансляция секции #2 <i>(начало в 15:00 по Екб)</i>
+            </a><br>
+            <a href="https://youtu.be/ZYwASJy1e_Y" class="btn btn-info d-block mt-3 text-white" target="_blank">
+                Трансляция секции #3 <i>(начало в 15:00 по Екб)</i>
+            </a><br>
+            <a href="https://youtu.be/64yYDRl1OGE" class="btn btn-info d-block mt-3 text-white" target="_blank">
+                Трансляция секции #4 <i>(начало в 15:00 по Екб)</i>
+            </a><br>
+
+                <!--
             <p class="text-center"> Идентификатор конференции: <b>818 8245 6773</b><br> Код доступа: <b> 321232</b> </p>
+            -->
                 <p class="text-center">Начало:<b> 10:00 мск (12:00 екб)</b></p>
             {{--
                 <h3 class="text-center">Материалы конференции</h3>
